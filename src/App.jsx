@@ -1,13 +1,20 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Header from "./Header";
+import styled from "styled-components";
+
+const Main = styled.div`
+  padding: 32px 160px;
+  background-color: #F7F8F9;
+  height: 100vh;
+`
 
 function App() {
-
   return (
-    <>
-      <h1>Hello World!</h1>
-    </>
-  )
+    <Main>
+      <Header />
+    </Main>
+  );
 }
 
-export default App
+export default App;
