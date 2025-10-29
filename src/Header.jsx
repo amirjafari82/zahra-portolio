@@ -9,8 +9,8 @@ const StyledHeader = styled.header`
 `;
 
 const StyledImage = styled.img`
-  width: 128px;
-  height: 128px;
+  width: 102px;
+  height: 102px;
   border-radius: 100%;
 `;
 
@@ -28,7 +28,7 @@ const StyledNavbar = styled.div`
 const StyledItem = styled.a`
   cursor: pointer;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   color: #767676;
   transition: 0.3s all ease-in-out;
   &:hover {
@@ -46,8 +46,8 @@ const ResumeDownload = styled.button`
   border-radius: 56px;
   box-shadow: 0px 4px 0px 0px #e3e3e3;
   gap: 8px;
-  font-weight: 800;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
 `;
 
