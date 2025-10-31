@@ -7,16 +7,16 @@ import LastProjects from "./Sections/LastProjects";
 
 const Main = styled.div`
   padding: 32px 160px;
-  background-color: #F7F8F9;
+  background-color: #f7f8f9;
   height: 100vh;
-`
+`;
 
 function App() {
   return (
     <Main>
       <Header />
       <HeroSection />
-      <LastProjects /> 
+      <LastProjects />
     </Main>
   );
 }

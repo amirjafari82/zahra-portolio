@@ -75,8 +75,8 @@ export default function Header() {
     <StyledHeader>
       <StyledImage src={"./images/zahra-header.png"} />
       <StyledNavbar>
-        {items.map((i) => (
-          <StyledItem>{i.name}</StyledItem>
+        {items.map((i, index) => (
+          <StyledItem key={index}>{i.name}</StyledItem>
         ))}
       </StyledNavbar>
       <ResumeDownload>

@@ -1,28 +1,22 @@
-import React from "react"
+import React from "react";
 import styled from "styled-components";
 
 const StyledLastProject = styled.div`
-    margin-top: 64px;
-`
+  margin-top: 64px;
+`;
 
-const LastHeader = styled.h3`
-  
-`
+const LastHeader = styled.h3``;
 
-const LastHeaderBold = styled.span`
-  
-`
+const LastHeaderBold = styled.span``;
 
 const LastProjects = () => {
   return (
-    <LastProjects>
-      
+    <StyledLastProject>
       <LastHeader>
         Last <LastHeaderBold>Projects</LastHeaderBold>
       </LastHeader>
-
-    </LastProjects>
-  )
+    </StyledLastProject>
+  );
 };
 
 export default LastProjects;
