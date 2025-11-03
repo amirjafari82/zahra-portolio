@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Download from "./assets/icons/Download";
 
@@ -71,7 +71,6 @@ const items = [
 ];
 
 export default function Header() {
-	
 	return (
 		<StyledHeader>
 			<StyledImage src={"./images/zahra-header.png"} id="img" />

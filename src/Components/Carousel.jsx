@@ -40,15 +40,20 @@ const StyledImage = styled.img`
 const Carousel = () => {
 	const [image, setImage] = useState(1);
 	const carouselRef = useRef(null);
-	const intervalRef = useRef(null);
+	const drag = useRef({ isDragging: false, startX: 0, scrollLeft: 0 });
+	const scrollToImage = (index) => {
+		const carousel = carouselRef.current;
+		const imageEl = document.getElementById(`carousel-${index}`);
+		if (!carousel || !imageEl) return;
 
-	const drag = useRef({
-		isDragging: false,
-		startX: 0,
-		scrollLeft: 0,
-	});
+		const imageCenter =
+			imageEl.offsetLeft + imageEl.offsetWidth / 2 - carousel.offsetWidth / 2;
 
-	// ---------------- Mouse Wheel Handler ----------------
+		carousel.scrollTo({
+			left: imageCenter,
+			behavior: "smooth",
+		});
+	};
 	useEffect(() => {
 		const box = carouselRef.current;
 		let isScrolling = false;
@@ -59,30 +64,25 @@ const Carousel = () => {
 			isScrolling = true;
 
 			setImage((prev) => {
-				let next;
-				if (event.deltaY > 0) {
-					next = prev === images.length ? 1 : prev + 1;
-				} else {
-					next = prev === 1 ? images.length : prev - 1;
-				}
-
-				document
-					.getElementById(`carousel-${next}`)
-					.scrollIntoView({ behavior: "smooth", inline: "center" });
-
+				const next =
+					event.deltaY > 0
+						? prev === images.length
+							? 1
+							: prev + 1
+						: prev === 1
+						? images.length
+						: prev - 1;
+				scrollToImage(next);
 				return next;
 			});
 
-			setTimeout(() => {
-				isScrolling = false;
-			}, 400);
+			setTimeout(() => (isScrolling = false), 400);
 		};
 
 		box.addEventListener("wheel", handleWheel, { passive: false });
 		return () => box.removeEventListener("wheel", handleWheel);
 	}, []);
 
-	// ---------------- Drag & Touch Handlers ----------------
 	useEffect(() => {
 		const carousel = carouselRef.current;
 
@@ -104,7 +104,6 @@ const Carousel = () => {
 			if (!drag.current.isDragging) return;
 			drag.current.isDragging = false;
 
-			// Snap to closest image
 			const children = Array.from(carousel.children).filter(
 				(el) => el.tagName === "IMG"
 			);
@@ -122,18 +121,14 @@ const Carousel = () => {
 			});
 
 			setImage(closestIndex);
-			document
-				.getElementById(`carousel-${closestIndex}`)
-				.scrollIntoView({ behavior: "smooth", inline: "center" });
+			scrollToImage(closestIndex);
 		};
 
-		// Mouse events
 		carousel.addEventListener("mousedown", startDrag);
 		carousel.addEventListener("mousemove", onDrag);
 		window.addEventListener("mouseup", stopDrag);
 		carousel.addEventListener("mouseleave", stopDrag);
 
-		// Touch events
 		carousel.addEventListener("touchstart", startDrag);
 		carousel.addEventListener("touchmove", onDrag, { passive: false });
 		window.addEventListener("touchend", stopDrag);
@@ -143,38 +138,26 @@ const Carousel = () => {
 			carousel.removeEventListener("mousemove", onDrag);
 			window.removeEventListener("mouseup", stopDrag);
 			carousel.removeEventListener("mouseleave", stopDrag);
-
 			carousel.removeEventListener("touchstart", startDrag);
 			carousel.removeEventListener("touchmove", onDrag);
 			window.removeEventListener("touchend", stopDrag);
 		};
 	}, []);
 
-	// ---------------- Auto-scroll on hover ----------------
-	const startAutoScroll = () => {
-		if (intervalRef.current) return;
-		intervalRef.current = setInterval(() => {
+	useEffect(() => {
+		const interval = setInterval(() => {
 			setImage((prev) => {
 				const next = prev === images.length ? 1 : prev + 1;
-				document
-					.getElementById(`carousel-${next}`)
-					.scrollIntoView({ behavior: "smooth", inline: "center" });
+				scrollToImage(next);
 				return next;
 			});
 		}, 2000);
-	};
 
-	const stopAutoScroll = () => {
-		clearInterval(intervalRef.current);
-		intervalRef.current = null;
-	};
+		return () => clearInterval(interval);
+	}, []);
 
 	return (
-		<StyledCarousel
-			ref={carouselRef}
-			onMouseEnter={startAutoScroll}
-			onMouseLeave={stopAutoScroll}
-		>
+		<StyledCarousel ref={carouselRef}>
 			{images.map((img, idx) => (
 				<StyledImage
 					key={idx + 1}

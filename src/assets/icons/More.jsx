@@ -1,12 +1,11 @@
 import * as React from "react";
-const More = (props) => (
+const More = ({ width, height }) => (
 	<svg
-		width={42}
-		height={28}
+		width={width || 42}
+		height={height || 28}
 		viewBox="0 0 42 28"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
-		{...props}
 	>
 		<path
 			d="M0 13.4189L28.2988 13.4189"
