@@ -7,6 +7,14 @@ const StyledCaseStudyItem = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
 	padding: 40px 32px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	&:hover {
+		box-shadow: 0px 6px 0.3px 0px #00000040;
+		h4 {
+			color: #1203df;
+		}
+	}
 `;
 
 const StyledImg = styled.img`
@@ -25,14 +33,15 @@ const StyledIntro = styled.div`
 `;
 
 const StyledTitle = styled.h4`
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 600;
+	transition: all 0.3s ease;
 `;
 
 const StyledDesc = styled.p`
 	font-size: 18px;
 	font-weight: 300;
-	line-height: 40px;
+	line-height: 32px;
 `;
 
 const StyledButton = styled.div`
@@ -51,7 +60,7 @@ const CaseStudyItem = ({ caseStudy }) => {
 					<StyledDesc>{caseStudy.desc}</StyledDesc>
 				</StyledIntro>
 				<StyledButton>
-					<More {...{ width: 111, height: 80 }} />
+					<More {...{ width: 68, height: 52 }} />
 				</StyledButton>
 			</BottomSection>
 		</StyledCaseStudyItem>

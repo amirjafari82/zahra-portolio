@@ -9,6 +9,7 @@ const StyledCaseStudies = styled.div`
 
 const Header = styled.h3`
 	margin-top: 164px;
+	margin-bottom: 40px;
 	font-size: 32px;
 	font-weight: 400;
 	text-align: center;
@@ -40,12 +41,12 @@ const CaseStudies = () => {
 	return (
 		<StyledCaseStudies>
 			<Header>
-				Some <HeaderBold> Case Studies </HeaderBold>
+				<HeaderBold> Case Studies </HeaderBold>
 			</Header>
 			<CaseStudyItems />
-			<MoreButton>
+			{/* <MoreButton>
 				More Case Studies <More />
-			</MoreButton>
+			</MoreButton> */}
 		</StyledCaseStudies>
 	);
 };

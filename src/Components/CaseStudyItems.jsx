@@ -33,7 +33,7 @@ const StyledCaseStudyItems = styled.div`
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;
-    gap: 32px;
+	gap: 32px;
 	align-items: center;
 `;
 
