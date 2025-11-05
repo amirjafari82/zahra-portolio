@@ -5,6 +5,7 @@ import HeroSection from "./Sections/HeroSection";
 import LastProjects from "./Sections/LastProjects";
 import CaseStudies from "./Sections/CaseStudies";
 import ProfileSummary from "./Sections/ProfileSummary";
+import AboutMe from "./Sections/AboutMe";
 
 const Main = styled.div`
 	padding: 32px 160px;
@@ -19,6 +20,7 @@ function App() {
 			<LastProjects />
 			<CaseStudies />
 			<ProfileSummary />
+			<AboutMe />
 		</Main>
 	);
 }
