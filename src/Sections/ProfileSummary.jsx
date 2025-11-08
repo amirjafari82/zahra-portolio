@@ -19,9 +19,9 @@ const Sec = styled.div`
     gap: 24px;
 `
 
-const ProfileSummary = (props) => {
+const ProfileSummary = () => {
 	return (
-		<StyledProfileSummary>
+		<StyledProfileSummary id="profile_summary">
 			<Sec>
 				<MyExperience />
 				<Skills />

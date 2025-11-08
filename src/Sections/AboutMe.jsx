@@ -54,15 +54,16 @@ const MoreButton = styled.button`
 	align-items: center;
 	gap: 8px;
 	transition: all 0.3s ease;
+	box-shadow: 0px 4px 0px 0px #e3e3e3;
 	&:hover {
-		box-shadow: 0px 4px 0px 0px #e3e3e3;
+		box-shadow: 0px 4px 0px 0px #1203df38;
 		color: #1203df;
 	}
 `;
 
 const AboutMe = () => {
 	return (
-		<StyledAboutMe>
+		<StyledAboutMe id="about_me">
 			<LeftSide>
 				<Header>
 					About<HeaderBold> Me</HeaderBold>

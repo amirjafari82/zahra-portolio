@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Download from "./assets/icons/Download";
+import Download from "../assets/icons/Download";
 
 const StyledHeader = styled.header`
 	display: flex;
@@ -54,7 +54,7 @@ const ResumeDownload = styled.button`
 const items = [
 	{
 		name: "About me",
-		link: "#",
+		link: "about_me",
 	},
 	{
 		name: "Portfolio",
@@ -66,17 +66,27 @@ const items = [
 	},
 	{
 		name: "Contact Me",
-		link: "#",
+		link: "profile_summary",
 	},
 ];
 
-export default function Header() {
+export default function Header({ setShowScroll }) {
 	return (
 		<StyledHeader>
 			<StyledImage src={"./images/zahra-header.png"} id="img" />
 			<StyledNavbar>
 				{items.map((i, index) => (
-					<StyledItem key={index}>{i.name}</StyledItem>
+					<StyledItem
+						onClick={() => {
+							const element = document.getElementById(i.link);
+							console.log(i.link);
+							element.scrollIntoView({ behavior: "smooth", block: "center" });
+							setShowScroll(true);
+						}}
+						key={index}
+					>
+						{i.name}
+					</StyledItem>
 				))}
 			</StyledNavbar>
 			<ResumeDownload>

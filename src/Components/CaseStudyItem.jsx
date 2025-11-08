@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import More from "../assets/icons/More";
+import { Link } from "react-router-dom";
 
-const StyledCaseStudyItem = styled.div`
+const StyledCaseStudyItem = styled(Link)`
+	text-decoration: none;
 	flex-basis: calc(50% - 80px);
 	background-color: #fff;
 	border-radius: 56px;
@@ -36,12 +38,14 @@ const StyledTitle = styled.h4`
 	font-size: 22px;
 	font-weight: 600;
 	transition: all 0.3s ease;
+	color: #040111;
 `;
 
 const StyledDesc = styled.p`
 	font-size: 18px;
 	font-weight: 300;
 	line-height: 32px;
+	color: #252525;
 `;
 
 const StyledButton = styled.div`
@@ -50,9 +54,8 @@ const StyledButton = styled.div`
 `;
 
 const CaseStudyItem = ({ caseStudy }) => {
-	console.log({ caseStudy });
 	return (
-		<StyledCaseStudyItem>
+		<StyledCaseStudyItem to={`/caseStudies/${caseStudy.link}`}>
 			<StyledImg src={caseStudy.image} />
 			<BottomSection>
 				<StyledIntro>

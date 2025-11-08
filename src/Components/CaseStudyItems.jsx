@@ -7,25 +7,25 @@ const items = [
 		image: "./images/SEO_Analyzer.png",
 		title: "Designing an SEO Analyzer Dashboard",
 		desc: "An intuitive SEO dashboard that turns complex data into clear insights, helping specialists track performance and make smarter, faster decisions.",
-		link: "",
+		link: "Javidaan",
 	},
 	{
 		image: "./images/Finance.png",
 		title: "Designing an User-friendly Finance App",
 		desc: "A smart banking app that helps you manage your money effortlessly — secure, simple, and always within reach.",
-		link: "",
+		link: "App100",
 	},
 	{
 		image: "./images/Appointment.png",
 		title: "Designing a Doctor Appointment App",
 		desc: "An easy, stress-free way to book doctor appointments, keep track of your records, and stay in touch with your doctor.",
-		link: "",
+		link: "Nabz",
 	},
 	{
 		image: "./images/Redesign.png",
 		title: "Redesigning a service app",
 		desc: "A handy app that helps you book doctor appointments, manage your records, and easily stay in touch with your doctor.",
-		link: "",
+		link: "Achare", 
 	},
 ];
 
