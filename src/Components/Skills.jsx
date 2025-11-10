@@ -6,6 +6,7 @@ const StyledSkills = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
 	padding: 26px 20px;
+	border: 6px solid #E6E4FF;
 	/* flex-grow: 0.45; */
 	flex-basis: 40%;
 `;

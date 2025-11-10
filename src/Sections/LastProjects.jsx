@@ -25,19 +25,25 @@ const MoreButton = styled.button`
 	padding: 20px 32px;
 	border: none;
 	gap: 10px;
-	box-shadow: 0px 4px 0px 0px #e3e3e3;
 	justify-content: center;
 	margin: 32px auto 0px auto;
 	color: #003eba;
 	font-size: 20px;
 	font-weight: 600;
 	cursor: pointer;
+	box-shadow: 0px 6px 0px 0px #dbd8ff;
+	transition: all 0.3s ease;
+	border: 1px solid #dbd8ffbc;
+	&:hover {
+		box-shadow: 0px 0px 5px 0px #f5f5f582;
+		transform: translateY(3px);
+	}
 `;
 const LastProjects = () => {
 	return (
 		<StyledLastProject>
 			<LastHeader>
-				Last <LastHeaderBold>Projects</LastHeaderBold>
+				UI <LastHeaderBold>Projects</LastHeaderBold>
 			</LastHeader>
 			<Carousel />
 			<MoreButton>

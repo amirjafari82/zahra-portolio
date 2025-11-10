@@ -1,3 +1,6 @@
+import JavidaanDesign from "./Javidaan/Design/JavidaanDesign";
+import JavidaanOverView from "./Javidaan/ProjectOverView/JavidaanOverView";
+import JavidaanResearch from "./Javidaan/Research/JavidaanResearch";
 import Figma from "./tools/Figma";
 import Maze from "./tools/Maze";
 import Meet from "./tools/Meet";
@@ -10,7 +13,9 @@ export const caseItems = {
 			date: "2025",
 			device: "Web",
 			role: "Product Designer",
-			bgColor: "#D9E7FF",
+			bgStyle: {
+				background: "linear-gradient(90deg, #C4DAFF 0%, #EAF2FF 100%)",
+			},
 			tools: [Figma, Maze, PhotoShop, Meet],
 			image: "../images/pageImages/Javidaan.png",
 			imgHeight: "460px",
@@ -18,6 +23,14 @@ export const caseItems = {
 				marginLeft: "-100px",
 			},
 		},
+		projectOverViewComp: JavidaanOverView,
+		problem: `SEO specialists deal with tons of data every day,
+			jumping between different tools to make sense of it all.
+			The goal was to bring everything together in one clear, easy-to-use dashboard.
+			Because both experts and clients interact with it daily,
+			it needed to be smooth, simple, and efficient — but still powerful enough to handle complex insights.`,
+		research: JavidaanResearch,
+		design: JavidaanDesign,
 	},
 	App100: {
 		header: {
@@ -43,7 +56,7 @@ export const caseItems = {
 			bgColor: "#F5F8FD",
 			tools: [Figma, Maze, PhotoShop, Meet],
 			image: "../images/pageImages/Nabz.png",
-            imgHeight: "447px",
+			imgHeight: "447px",
 		},
 	},
 	Achare: {
@@ -55,7 +68,7 @@ export const caseItems = {
 			bgColor: "#F7F7F7",
 			tools: [Figma, Maze, PhotoShop, Meet],
 			image: "../images/pageImages/Achare.png",
-            imgHeight: "444px",
+			imgHeight: "444px",
 		},
 	},
 };

@@ -11,8 +11,12 @@ const StyledCaseStudyItem = styled(Link)`
 	padding: 40px 32px;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	box-shadow: 0px 6px 0px 0px #dbd8ff;
+	transition: all 0.3s ease;
+	border: 1px solid #dbd8ffbc;
 	&:hover {
-		box-shadow: 0px 6px 0.3px 0px #00000040;
+		box-shadow: 0px 0px 5px 0px #f5f5f582;
+		transform: translateY(3px);
 		h4 {
 			color: #1203df;
 		}
@@ -42,7 +46,7 @@ const StyledTitle = styled.h4`
 `;
 
 const StyledDesc = styled.p`
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 300;
 	line-height: 32px;
 	color: #252525;

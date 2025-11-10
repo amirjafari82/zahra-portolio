@@ -5,6 +5,7 @@ import Dashed from "../assets/icons/Dashed";
 const StyledMyExperience = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
+	border: 6px solid #E6E4FF;
 	padding: 40px;
 	flex-basis: 60%;
 `;

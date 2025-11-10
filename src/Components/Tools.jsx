@@ -4,6 +4,7 @@ import styled from "styled-components";
 const StyledTools = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
+	border: 1px solid #DADADA;
 	padding: 40px;
 	flex-basis: 60%;
 `;

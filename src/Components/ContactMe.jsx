@@ -5,6 +5,7 @@ const StyledContactMe = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
 	padding: 40px;
+	border: 1px solid #DADADA;
 	flex-basis: 60%;
 `;
 

@@ -44,20 +44,21 @@ const MoreButton = styled.button`
 	margin-top: -10px;
 	width: fit-content;
 	background-color: #fff;
-	border: none;
 	padding: 24px;
 	border-radius: 56px;
 	font-size: 18px;
 	font-weight: 500;
+	color: #1203df;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	box-shadow: 0px 6px 0px 0px #dbd8ff;
 	transition: all 0.3s ease;
-	box-shadow: 0px 4px 0px 0px #e3e3e3;
+	border: 1px solid #dbd8ffbc;
 	&:hover {
-		box-shadow: 0px 4px 0px 0px #1203df38;
-		color: #1203df;
+		box-shadow: 0px 0px 5px 0px #f5f5f582;
+		transform: translateY(3px);
 	}
 `;
 
