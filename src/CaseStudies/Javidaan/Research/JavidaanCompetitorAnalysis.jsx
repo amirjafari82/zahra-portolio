@@ -1,36 +1,59 @@
 import React from "react";
+import styled from "styled-components";
+import { device } from "../../../styles/breakpoints";
+
+const StyledH4 = styled.h4`
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 16px;
+	@media ${device.tablet} {
+		font-size: 20px !important;
+		margin-bottom: 8px;
+	}
+`;
+
+const StyledP1 = styled.p`
+	font-size: 16px;
+`;
+
+const StyledP2 = styled.p`
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+	@media ${device.tablet} {
+		font-size: 16px !important;
+	}
+`;
+
+const StyledCard = styled.div`
+	background-color: #1e3c6e;
+	width: 100%;
+	text-align: center;
+	padding-top: 27px;
+	border-radius: 56px;
+	overflow: hidden;
+	margin-top: 20px;
+	@media ${device.tablet} {
+		> img {
+			width: calc(100% - 48px);
+			margin: 12px 24px;
+		}
+	}
+`;
 
 const JavidaanCompetitorAnalysis = () => {
 	return (
 		<div style={{ marginTop: "56px" }}>
-			<h4
-				style={{
-					fontSize: "24px",
-					fontWeight: 500,
-					marginBottom: "16px",
-				}}
-			>
-				Competitor analysis
-			</h4>
-			<p>
+			<StyledH4>Competitor analysis</StyledH4>
+			<StyledP1>
 				In the next step, I reviewed the existing Iranian competitors in the
 				market to get more familiar with the{" "}
 				<strong>SEO landscape and its tools.</strong> This also helped me form a
 				clearer picture of what an SEO analyzer tool should offer. Below, you
 				can see a list of the competitors I analyzed along with their features.
-			</p>
+			</StyledP1>
 
-			<div
-				style={{
-					backgroundColor: "#1E3C6E",
-					width: "100%",
-					textAlign: "center",
-					paddingTop: "27px",
-					borderRadius: "56px",
-					overflow: "hidden",
-					marginTop: "20px",
-				}}
-			>
+			<StyledCard>
 				<div
 					style={{
 						position: "relative",
@@ -50,7 +73,7 @@ const JavidaanCompetitorAnalysis = () => {
 						}}
 					/>
 				</div>
-			</div>
+			</StyledCard>
 		</div>
 	);
 };

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import JavidaanCompetitorAnalysis from "./JavidaanCompetitorAnalysis";
 import JavidaanFeatures from "./JavidaanFeatures";
 import Register from "../../../assets/icons/Register";
+import { device } from "../../../styles/breakpoints";
 
 const researchItems = [
 	{
@@ -22,6 +23,32 @@ const researchItems = [
 	},
 ];
 
+const StyledH4 = styled.h4`
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 8px;
+	@media ${device.tablet} {
+		font-size: 20px !important;
+	}
+`;
+
+const StyledP1 = styled.p`
+	font-size: 20px;
+	margin-bottom: 24px;
+	@media ${device.tablet} {
+		font-size: 16px !important;
+	}
+`;
+
+const StyledP2 = styled.p`
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+	@media ${device.tablet} {
+		font-size: 16px !important;
+	}
+`;
+
 const StyledResearchItems = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -33,26 +60,18 @@ const StyledResearchItem = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 4px;
+	@media ${device.tablet} {
+		> p {
+			font-size: 16px !important;
+		}
+	}
 `;
 
 const JavidaanResearch = () => {
 	return (
 		<div>
-			<h4
-				style={{
-					fontSize: "24px",
-					fontWeight: 500,
-					marginBottom: "8px",
-				}}
-			>
-				Interview
-			</h4>
-			<p
-				style={{
-					fontSize: "20px",
-					marginBottom: "24px",
-				}}
-			>
+			<StyledH4>Interview</StyledH4>
+			<StyledP1>
 				Since the timeline was tight and we needed to develop the first version
 				quickly, I jumped straight into discussions
 				<strong> with both the SEO and development teams.</strong> This helped
@@ -60,15 +79,10 @@ const JavidaanResearch = () => {
 				limits — so I could propose solutions that were
 				<strong> practical to build</strong> within the timeframe while
 				<strong> still meeting the SEO team’s needs.</strong>
-			</p>
-			<p
-				style={{
-					fontSize: "20px",
-					fontWeight: 500,
-				}}
-			>
+			</StyledP1>
+			<StyledP2>
 				Things I learned in general from interviews with SEO experts:
-			</p>
+			</StyledP2>
 			<StyledResearchItems>
 				{researchItems?.map((item) => {
 					return (

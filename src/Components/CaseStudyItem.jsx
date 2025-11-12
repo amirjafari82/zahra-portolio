@@ -6,7 +6,7 @@ import { device } from "../styles/breakpoints";
 
 const StyledCaseStudyItem = styled(Link)`
 	text-decoration: none;
-	flex-basis: calc(50% - 80px);
+	flex-basis: calc(50% - 81px);
 	background-color: #fff;
 	border-radius: 56px;
 	padding: 40px 32px;

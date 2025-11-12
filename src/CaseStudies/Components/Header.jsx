@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../styles/breakpoints";
 
 const StyledHeader = styled.div`
 	background-color: ${(props) => props?.bgColor};
@@ -7,6 +8,9 @@ const StyledHeader = styled.div`
 	border-radius: 56px;
 	display: flex;
 	justify-content: space-between;
+	@media ${device.desktopLgMid} {
+		flex-direction: column-reverse;
+	}
 `;
 
 const HeaderInfo = styled.div`
@@ -20,14 +24,24 @@ const Title = styled.p`
 	font-size: 48px;
 	font-weight: 400;
 	margin-bottom: 60px;
+	@media ${device.tablet} {
+		font-size: 24px;
+		margin-bottom: 24px;
+	}
 `;
 
 const Date = styled.p`
 	font-size: 20px;
+	@media ${device.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const Device = styled.p`
 	font-size: 20px;
+	@media ${device.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const Role = styled.div`
@@ -43,11 +57,17 @@ const Role = styled.div`
 
 const RoleTitle = styled.span`
 	font-size: 20px;
+	@media ${device.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const RoleSubject = styled.span`
 	font-weight: 600;
 	font-size: 20px;
+	@media ${device.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const Divider = styled.div`
@@ -55,12 +75,20 @@ const Divider = styled.div`
 	height: 48px;
 	background-color: #c4c1c1;
 	margin: -8px 8px;
+	@media ${device.tablet} {
+		margin: -8px 2px;
+	}
 `;
 
 const Tools = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
+	@media ${device.tablet} {
+		> p {
+			font-size: 14px !important;
+		}
+	}
 `;
 
 const ToolsItems = styled.div`
@@ -72,9 +100,20 @@ const ToolsItems = styled.div`
 	border-radius: 56px;
 	width: fit-content;
 	padding: 4px 12px;
+	@media ${device.tablet} {
+		> svg {
+			width: 48px !important;
+		}
+	}
 `;
 
-const HeaderImage = styled.img``;
+const HeaderImage = styled.img`
+	@media ${device.desktopLgMid} {
+		width: 100%;
+		height: 100%;
+		margin-left: 0px !important;
+	}
+`;
 
 const Header = ({ curruntPage }) => {
 	return (

@@ -1,17 +1,20 @@
 import React from "react";
+import styled from "styled-components";
+import { device } from "../../../styles/breakpoints";
 
-const LowFidelityWireframes = (props) => {
+const StyledH4 = styled.h4`
+	font-weight: 600;
+	font-size: 24px;
+	margin-bottom: 8px;
+	@media ${device.tablet} {
+		font-size: 20px !important;
+	}
+`;
+
+const LowFidelityWireframes = () => {
 	return (
 		<div>
-			<h4
-				style={{
-					fontWeight: 600,
-					fontSize: "24px",
-					marginBottom: "8px",
-				}}
-			>
-				Low Fidelity Wireframes
-			</h4>
+			<StyledH4>Low Fidelity Wireframes</StyledH4>
 			<p>
 				To save time, I sketched out a series of hand-drawn concepts based on
 				the insights we had gathered and the features that were finalized. I

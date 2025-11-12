@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../../styles/breakpoints";
 
 const Title = styled.h3`
 	color: #0051ba;
@@ -7,6 +8,17 @@ const Title = styled.h3`
 	font-weight: 600;
 	margin-bottom: 16px;
 	margin-top: 56px;
+	@media ${device.tablet} {
+		font-size: 22px !important;
+	}
+`;
+
+const StyledP1 = styled.p`
+	font-size: 20px;
+	font-weight: 400;
+	@media ${device.tablet} {
+		font-size: 16px !important;
+	}
 `;
 
 const Problem = ({ curruntPage }) => {
@@ -14,14 +26,7 @@ const Problem = ({ curruntPage }) => {
 	return (
 		<div>
 			<Title>Problem</Title>
-			<p
-				style={{
-					fontSize: "20px",
-					fontWeight: 400,
-				}}
-			>
-				{problem}
-			</p>
+			<StyledP1>{problem}</StyledP1>
 		</div>
 	);
 };

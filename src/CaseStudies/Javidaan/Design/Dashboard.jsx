@@ -1,5 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../../styles/breakpoints";
+
+const StyledH4 = styled.h4`
+	font-weight: 600;
+	font-size: 24px;
+	margin-top: 32px;
+	margin-bottom: 4px;
+	@media ${device.tablet} {
+		font-size: 20px !important;
+	}
+`;
 
 const StyledCard = styled.div`
 	background-color: #1e3c6e;
@@ -7,10 +18,10 @@ const StyledCard = styled.div`
 	display: flex;
 	gap: 21px;
 	padding: 0px 40px;
-    margin-top: 16px;
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
+	margin-top: 16px;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
 `;
 
 const LeftSide = styled.div`
@@ -19,9 +30,19 @@ const LeftSide = styled.div`
 	gap: 83px;
 	justify-content: center;
 	align-items: center;
+	@media ${device.laptop} {
+		display: none;
+	}
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+	@media ${device.laptop} {
+		margin: 12px auto !important;
+		border-radius: 12px;
+		width: 100%;
+		height: auto;
+	}
+`;
 
 const RightSide = styled.div`
 	display: flex;
@@ -29,6 +50,9 @@ const RightSide = styled.div`
 	gap: 43px;
 	align-items: center;
 	justify-content: center;
+	@media ${device.laptop} {
+		display: none;
+	}
 `;
 
 const StyledItem = styled.div`
@@ -40,16 +64,7 @@ const StyledItem = styled.div`
 const Dashboard = () => {
 	return (
 		<div>
-			<h4
-				style={{
-					fontWeight: 600,
-					fontSize: "24px",
-					marginBottom: "8px",
-					marginTop: "120px",
-				}}
-			>
-				Dashboard
-			</h4>
+			<StyledH4>Dashboard</StyledH4>
 			<p>
 				The Javidan Dashboard was designed to give SEO specialists a clear,
 				instant overview of their project’s performance. It focuses on

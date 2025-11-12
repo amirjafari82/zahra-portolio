@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Register from "../../../assets/icons/Register";
+import { device } from "../../../styles/breakpoints";
 
 const roleItems = [
 	{
@@ -21,6 +22,32 @@ const roleItems = [
 	},
 ];
 
+const StyledP1 = styled.p`
+	font-size: 24px;
+	font-weight: 400;
+	@media ${device.tablet} {
+		font-size: 16px !important;
+	}
+`;
+
+const StyledH5 = styled.h5`
+	font-size: 24px;
+	font-weight: 500;
+	margin-top: 20px;
+	margin-bottom: 16px;
+	@media ${device.tablet} {
+		font-size: 20px !important;
+	}
+`;
+
+const StyledP2 = styled.p`
+	font-size: 20px;
+	font-weight: 400;
+	@media ${device.tablet} {
+		font-size: 16px !important;
+	}
+`;
+
 const StyledRoles = styled.div`
 	margin-top: 16px;
 	display: flex;
@@ -32,43 +59,32 @@ const StyledRole = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 4px;
+	@media ${device.tablet} {
+		> p {
+			font-size: 14px !important;
+		}
+		> svg {
+			width: 16px !important;
+		}
+	}
 `;
 
 const JavidaanOverView = () => {
 	return (
 		<div>
-			<p
-				style={{
-					fontSize: "24px",
-					fontWeight: 400,
-				}}
-			>
+			<StyledP1>
 				The Javidan SEO Analyzer Dashboard is a key product at Amina Group,
 				built to help SEO teams track performance, spot keyword trends, and turn
 				data into clear insights. I’m still actively working on it — adding new
 				features and improving the experience together with the SEO and dev
 				teams.
-			</p>
-			<h5
-				style={{
-					fontSize: "24px",
-					fontWeight: 500,
-					marginTop: "20px",
-					marginBottom: "16px",
-				}}
-			>
-				My role
-			</h5>
-			<p
-				style={{
-					fontSize: "20px",
-					fontWeight: 400,
-				}}
-			>
+			</StyledP1>
+			<StyledH5>My role</StyledH5>
+			<StyledP2>
 				As a Product Designer, I designed projects through the entire design
 				process from conceiving to implementing to iterating. My
 				responsibilities include:
-			</p>
+			</StyledP2>
 			<StyledRoles>
 				{roleItems?.map((item) => {
 					return (
