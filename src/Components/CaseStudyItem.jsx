@@ -56,6 +56,7 @@ const StyledDesc = styled.p`
 	color: #252525;
 	@media ${device.mobile} {
 		font-size: 12px;
+		line-height: 24px;
 	}
 `;
 

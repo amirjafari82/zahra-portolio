@@ -16,15 +16,6 @@ const StyledP1 = styled.p`
 	font-size: 16px;
 `;
 
-const StyledP2 = styled.p`
-	font-size: 20px;
-	font-weight: 500;
-	margin-bottom: 6px;
-	@media ${device.tablet} {
-		font-size: 16px !important;
-	}
-`;
-
 const StyledCard = styled.div`
 	background-color: #1e3c6e;
 	width: 100%;
@@ -33,11 +24,14 @@ const StyledCard = styled.div`
 	border-radius: 56px;
 	overflow: hidden;
 	margin-top: 20px;
+`;
+
+const StyledImage = styled.div`
+	position: relative;
+	display: inline-block;
 	@media ${device.tablet} {
-		> img {
-			width: calc(100% - 48px);
-			margin: 12px 24px;
-		}
+		width: 80%;
+		margin: 0 auto;
 	}
 `;
 
@@ -54,12 +48,7 @@ const JavidaanCompetitorAnalysis = () => {
 			</StyledP1>
 
 			<StyledCard>
-				<div
-					style={{
-						position: "relative",
-						display: "inline-block",
-					}}
-				>
+				<StyledImage>
 					<img
 						src="../images/pageImages/javidaanResearch.png"
 						alt="Competitor Analysis"
@@ -72,7 +61,7 @@ const JavidaanCompetitorAnalysis = () => {
 								"linear-gradient(to bottom, black 70%, transparent 100%)",
 						}}
 					/>
-				</div>
+				</StyledImage>
 			</StyledCard>
 		</div>
 	);

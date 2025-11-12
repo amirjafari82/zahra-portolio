@@ -18,6 +18,10 @@ const HeaderInfo = styled.div`
 	flex-direction: column;
 	gap: 24px;
 	flex-basis: 70%;
+	@media ${device.tablet} {
+		gap: 12px;
+		flex-basis: 100%;
+	}
 `;
 
 const Title = styled.p`
@@ -53,6 +57,9 @@ const Role = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	@media ${device.tablet} {
+		padding: 4px;
+	}
 `;
 
 const RoleTitle = styled.span`
@@ -72,11 +79,12 @@ const RoleSubject = styled.span`
 
 const Divider = styled.div`
 	width: 1px;
-	height: 48px;
+	height: 48px;	
 	background-color: #c4c1c1;
 	margin: -8px 8px;
 	@media ${device.tablet} {
 		margin: -8px 2px;
+		height: 30px;
 	}
 `;
 
