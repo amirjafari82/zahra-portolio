@@ -20,6 +20,13 @@ const StyledIntro = styled.div`
 	@media ${device.desktop} {
 		font-size: 18px;
 	}
+
+	@media ${device.mobileSm} {
+		font-size: 14px;
+		> p {
+			gap: 4px;
+		}
+	}
 `;
 
 const StyledName = styled.span`
@@ -30,6 +37,10 @@ const StyledName = styled.span`
 	font-weight: 600;
 	@media ${device.desktop} {
 		font-size: 18px !important;
+	}
+	@media ${device.mobileSm} {
+		font-size: 14px !important;
+		padding: 2px 6px;
 	}
 `;
 
