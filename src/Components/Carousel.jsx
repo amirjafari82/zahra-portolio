@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { styled } from "styled-components";
+import { device } from "../styles/breakpoints";
 
 const images = [
 	"https://picsum.photos/id/10/800/500",
@@ -26,6 +27,9 @@ const StyledCarousel = styled.div`
 		content: "";
 		flex: 0 0 calc((100vw - 512px) / 2);
 	}
+	@media ${device.mobile} {
+		margin-top: 24px;
+	}
 `;
 
 const StyledImage = styled.img`
@@ -35,6 +39,11 @@ const StyledImage = styled.img`
 	opacity: ${(props) => (props.focused ? 1 : 0.3)};
 	transform: ${(props) => (props.focused ? "scale(1)" : "scale(0.8)")};
 	user-select: none;
+	@media ${device.mobile} {
+		width: calc(100% - 48px);
+		margin: 0 24px;
+		border-radius: 32px;
+	}
 `;
 
 const Carousel = () => {

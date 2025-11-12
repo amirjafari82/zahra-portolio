@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CaseStudyItem from "./CaseStudyItem";
+import { device } from "../styles/breakpoints";
 
 const items = [
 	{
@@ -35,6 +36,9 @@ const StyledCaseStudyItems = styled.div`
 	flex-wrap: wrap;
 	gap: 28px;
 	align-items: center;
+	@media ${device.laptop} {
+		flex-direction: column;
+	}
 `;
 
 const CaseStudyItems = () => {

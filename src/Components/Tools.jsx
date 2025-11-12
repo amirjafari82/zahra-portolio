@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../styles/breakpoints";
 
 const StyledTools = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
-	border: 1px solid #DADADA;
+	border: 1px solid #dadada;
 	padding: 40px;
 	flex-basis: 60%;
 `;
@@ -13,6 +14,9 @@ const StyledHeader = styled.h4`
 	font-size: 32px;
 	font-weight: 600;
 	margin-bottom: 48px;
+	@media ${device.tablet} {
+		font-size: 20px;
+	}
 `;
 
 const Images = styled.div`
@@ -20,12 +24,9 @@ const Images = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
-`;
-
-const One = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@media ${device.mobile} {
+		gap: 20px;
+	}
 `;
 
 const Multiple = styled.div`
@@ -33,9 +34,33 @@ const Multiple = styled.div`
 	justify-content: center;
 	align-items: center;
 	gap: 56px;
+	@media ${device.mobile} {
+		gap: 20px;
+		> #Illustrator {
+			width: 55px;
+			height: 55px;
+		}
+	}
 `;
 
 const Logo = styled.img`
+	@media ${device.mobile} {
+		width: 50px;
+		height: 50px;
+	}
+`;
+
+const One = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media ${device.mobile} {
+		> #Clarity {
+			width: 35px;
+			height: 35px;
+		}
+	}
 `;
 
 const Tools = () => {
@@ -44,7 +69,7 @@ const Tools = () => {
 			<StyledHeader>Tools</StyledHeader>
 			<Images>
 				<One>
-					<Logo src="./images/Figma.png" width={80} height={80} />
+					<Logo id="Figma" src="./images/Figma.png" width={80} height={80} />
 				</One>
 				<Multiple>
 					<Logo
@@ -53,11 +78,17 @@ const Tools = () => {
 						width={80}
 						height={80}
 					/>
-					<Logo src="./images/Illustrator.png" width={90} height={90} />
+					<Logo
+						id="Illustrator"
+						src="./images/Illustrator.png"
+						width={90}
+						height={90}
+					/>
 					<Logo src="./images/PhotoShop.png" width={80} height={80} />
 				</Multiple>
 				<One>
 					<Logo
+						id="Clarity"
 						src="./images/Clarity.png"
 						width={70}
 						height={70}

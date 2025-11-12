@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Dashed from "../assets/icons/Dashed";
+import { device } from "../styles/breakpoints";
 
 const StyledMyExperience = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
-	border: 6px solid #E6E4FF;
+	border: 6px solid #e6e4ff;
 	padding: 40px;
 	flex-basis: 60%;
 `;
@@ -14,11 +15,17 @@ const StyledHeader = styled.h4`
 	font-size: 32px;
 	font-weight: 300;
 	margin-bottom: 48px;
+	@media ${device.desktopLgMore} {
+		font-size: 20px;
+	}
 `;
 
 const StyledHeaderBold = styled.span`
 	font-size: 32px;
 	font-weight: 600;
+	@media ${device.desktopLgMore} {
+		font-size: 20px;
+	}
 `;
 
 const StyledDesc = styled.div`
@@ -37,6 +44,9 @@ const Line = styled.div`
 const StyledInfo = styled.span`
 	font-weight: 500;
 	font-size: 24px;
+	@media ${device.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const MyExperience = () => {
@@ -50,12 +60,12 @@ const MyExperience = () => {
 				<Line>
 					<StyledInfo>UI/UX Designer</StyledInfo>
 					<Dashed />
-                    <StyledInfo>2024-Present</StyledInfo>
+					<StyledInfo>2024-Present</StyledInfo>
 				</Line>
 				<Line>
 					<StyledInfo>Fashion Designer</StyledInfo>
-                    <Dashed />
-                    <StyledInfo>2022-2024</StyledInfo>
+					<Dashed />
+					<StyledInfo>2022-2024</StyledInfo>
 				</Line>
 			</StyledDesc>
 		</StyledMyExperience>

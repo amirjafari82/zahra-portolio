@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SkillsSvg from "../assets/icons/SkillsSvg";
+import { device } from "../styles/breakpoints";
 
 const StyledSkills = styled.div`
 	background-color: #fff;
@@ -15,6 +16,9 @@ const StyledHeader = styled.h4`
 	font-size: 32px;
 	font-weight: 600;
     padding: 14px 16px;
+	@media ${device.tablet} {
+			font-size: 20px;
+		}
 `;
 
 const StyledDesc = styled.div`

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import More from "../assets/icons/More";
 import { Link } from "react-router-dom";
+import { device } from "../styles/breakpoints";
 
 const StyledCaseStudyItem = styled(Link)`
 	text-decoration: none;
@@ -43,6 +44,9 @@ const StyledTitle = styled.h4`
 	font-weight: 600;
 	transition: all 0.3s ease;
 	color: #040111;
+	@media ${device.mobile} {
+		font-size: 14px;
+	}
 `;
 
 const StyledDesc = styled.p`
@@ -50,11 +54,20 @@ const StyledDesc = styled.p`
 	font-weight: 300;
 	line-height: 32px;
 	color: #252525;
+	@media ${device.mobile} {
+		font-size: 12px;
+	}
 `;
 
 const StyledButton = styled.div`
 	align-self: end;
 	cursor: pointer;
+	@media ${device.mobile} {
+		> svg {
+			width: 51px;
+			height: 37px;
+		}
+	}
 `;
 
 const CaseStudyItem = ({ caseStudy }) => {

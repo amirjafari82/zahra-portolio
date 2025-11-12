@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Download from "../assets/icons/Download";
+import { device } from "../styles/breakpoints";
 
 const StyledHeader = styled.header`
 	display: flex;
@@ -12,6 +13,10 @@ const StyledImage = styled.img`
 	width: 102px;
 	height: 102px;
 	border-radius: 100%;
+	@media ${device.desktop} {
+		width: 80px;
+		height: 80px;
+	}
 `;
 
 const StyledNavbar = styled.div`
@@ -23,6 +28,9 @@ const StyledNavbar = styled.div`
 	padding: 27px 40px;
 	border-radius: 100px;
 	box-shadow: 0px 4px 0px 0px #d9d9d9;
+	@media ${device.desktop} {
+		display: none;
+	}
 `;
 
 const StyledItem = styled.a`
@@ -49,6 +57,10 @@ const ResumeDownload = styled.button`
 	font-weight: 600;
 	font-size: 16px;
 	cursor: pointer;
+	@media ${device.desktop} {
+		font-size: 14px;
+		padding: 16px;
+	}
 `;
 
 const items = [

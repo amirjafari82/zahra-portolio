@@ -2,22 +2,33 @@ import React from "react";
 import styled from "styled-components";
 import CaseStudyItems from "../Components/CaseStudyItems";
 import More from "../assets/icons/More";
+import { device } from "../styles/breakpoints";
 
 const StyledCaseStudies = styled.div`
 	margin-top: 164px;
+	@media ${device.mobile} {
+		font-size: 24px;
+		margin-top: 42px;
+	}
 `;
 
 const Header = styled.h3`
-	margin-top: 164px;
 	margin-bottom: 40px;
 	font-size: 32px;
 	font-weight: 400;
 	text-align: center;
+	@media ${device.mobile} {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
 `;
 
 const HeaderBold = styled.span`
 	font-weight: 600;
 	font-size: 40px;
+	@media ${device.mobile} {
+		font-size: 24px;
+	}
 `;
 
 const MoreButton = styled.button`

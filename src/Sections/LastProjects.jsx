@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Carousel from "../Components/Carousel";
 import More from "../assets/icons/More";
+import { device } from "../styles/breakpoints";
 
 const StyledLastProject = styled.div`
 	margin-top: 64px;
@@ -11,10 +12,16 @@ const StyledLastProject = styled.div`
 const LastHeader = styled.h3`
 	font-size: 32px;
 	font-weight: 300;
+	@media ${device.desktopLg} {
+		font-size: 24px;
+	}
 `;
 
 const LastHeaderBold = styled.span`
 	font-weight: 600;
+	@media ${device.desktopLg} {
+		width: 100%;
+	}
 `;
 
 const MoreButton = styled.button`
@@ -37,6 +44,10 @@ const MoreButton = styled.button`
 	&:hover {
 		box-shadow: 0px 0px 5px 0px #f5f5f582;
 		transform: translateY(3px);
+	}
+	@media ${device.mobile} {
+		font-size: 14px;
+		padding: 14px 20px;
 	}
 `;
 const LastProjects = () => {

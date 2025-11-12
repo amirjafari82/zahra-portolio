@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import More from "../assets/icons/More";
+import { device } from "../styles/breakpoints";
 
 const StyledAboutMe = styled.div`
 	margin-top: 40px;
@@ -9,6 +10,9 @@ const StyledAboutMe = styled.div`
 	border-radius: 56px;
 	display: flex;
 	align-items: start;
+	@media ${device.desktopLgMore} {
+		flex-direction: column-reverse;
+	}
 `;
 
 const LeftSide = styled.div`
@@ -16,24 +20,50 @@ const LeftSide = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
+	flex-basis: 60%;
 `;
 
-const ImageSide = styled.img`
+const ImageSide = styled.div`
+	flex-basis: 40%;
+	height: 100%;
+	@media ${device.desktopLgMore} {
+		flex-basis: unset;
+		width: 100%;
+		height: 200px;
+	}
+`;
+
+const Image = styled.img`
 	border-radius: 0px 56px 56px 0px;
+	width: 100%;
+	height: 100%;
+	@media ${device.desktopLgMore} {
+		object-fit: cover;
+		border-radius: 56px 56px 0px 0px;
+	}
 `;
 
 const Header = styled.p`
 	font-size: 32px;
 	font-weight: 300;
+	@media ${device.tablet} {
+		font-size: 20px;
+	}
 `;
 
 const HeaderBold = styled.span`
 	font-size: 40px;
 	font-weight: 600;
+	@media ${device.tablet} {
+		font-size: 24px;
+	}
 `;
 
 const Paragraph = styled.p`
 	line-height: 35px;
+	@media ${device.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const Bold = styled.span`
@@ -59,6 +89,10 @@ const MoreButton = styled.button`
 	&:hover {
 		box-shadow: 0px 0px 5px 0px #f5f5f582;
 		transform: translateY(3px);
+	}
+	@media ${device.tablet} {
+		font-size: 14px;
+		padding: 12px;
 	}
 `;
 
@@ -94,8 +128,9 @@ const AboutMe = () => {
 					More Details On LinkedIn <More width={50} height={35} />
 				</MoreButton>
 			</LeftSide>
-
-			<ImageSide src="./images/Sample.png" width={655} height={650} />
+			<ImageSide>
+				<Image src="./images/Sample.png" width={655} height={650} />
+			</ImageSide>
 		</StyledAboutMe>
 	);
 };
