@@ -7,6 +7,7 @@ const StyledHeader = styled.div`
 	padding: 24px 36px;
 	border-radius: 56px;
 	display: flex;
+	color: ${(props) => props?.textcolor};
 	justify-content: space-between;
 	@media ${device.desktopLgMid} {
 		flex-direction: column-reverse;
@@ -21,6 +22,7 @@ const HeaderInfo = styled.div`
 	@media ${device.tablet} {
 		gap: 12px;
 		flex-basis: 100%;
+		margin-top: 16px;
 	}
 `;
 
@@ -79,7 +81,7 @@ const RoleSubject = styled.span`
 
 const Divider = styled.div`
 	width: 1px;
-	height: 48px;	
+	height: 48px;
 	background-color: #c4c1c1;
 	margin: -8px 8px;
 	@media ${device.tablet} {
@@ -112,14 +114,21 @@ const ToolsItems = styled.div`
 		> svg {
 			width: 48px !important;
 		}
+		align-items: center;
+		justify-content: start;
+		flex-wrap: wrap;
 	}
 `;
 
 const HeaderImage = styled.img`
 	@media ${device.desktopLgMid} {
-		width: 100%;
+		width: ${(props) => props?.imgdesktopLgMidRespWidth || "40%"};
+		height: 40%;
+		margin: 0 auto !important;
+	}
+	@media ${device.tablet} {
+		width: ${(props) => props?.imgtabletrespwidth || "100%"};
 		height: 100%;
-		margin-left: 0px !important;
 	}
 `;
 
@@ -127,6 +136,7 @@ const Header = ({ curruntPage }) => {
 	return (
 		<StyledHeader
 			bgColor={curruntPage.header.bgColor}
+			textcolor={curruntPage.header.textColor}
 			style={{
 				...curruntPage.header.bgStyle,
 			}}
@@ -148,8 +158,8 @@ const Header = ({ curruntPage }) => {
 				<Tools>
 					<p style={{ fontSize: "18px" }}>The tools we used: </p>
 					<ToolsItems>
-						{curruntPage.header.tools?.map((Tool) => (
-							<Tool />
+						{curruntPage.header.tools?.map((Tool, index) => (
+							<Tool key={index} />
 						))}
 					</ToolsItems>
 				</Tools>
@@ -158,6 +168,8 @@ const Header = ({ curruntPage }) => {
 				src={curruntPage.header.image}
 				width={curruntPage.header.imgWidth}
 				height={curruntPage.header.imgHeight}
+				imgtabletrespwidth={curruntPage.header.imgTabletRespWidth}
+				imgdesktopLgMidRespWidth={curruntPage.header.imgdesktopLgMidRespWidth}
 				style={{
 					...curruntPage.header.imageStyle,
 				}}

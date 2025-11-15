@@ -5,7 +5,7 @@ import { device } from "../styles/breakpoints";
 
 const StyledAboutMe = styled.div`
 	margin-top: 40px;
-	border: 1px solid #cfcece;
+	border: 6px solid #E6E4FF;
 	background-color: #fff;
 	border-radius: 56px;
 	display: flex;

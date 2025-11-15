@@ -45,18 +45,25 @@ const StyledItem = styled.a`
 `;
 
 const ResumeDownload = styled.button`
+	border-radius: 56px;
+	background-color: #fff;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	background-color: #fff;
-	padding: 25px 32px;
+	padding: 20px 32px;
 	border: none;
-	border-radius: 56px;
-	box-shadow: 0px 4px 0px 0px #e3e3e3;
-	gap: 8px;
+	gap: 10px;
+	justify-content: center;
+	font-size: 20px;
 	font-weight: 600;
-	font-size: 16px;
 	cursor: pointer;
+	box-shadow: 0px 6px 0px 0px #dbd8ff;
+	transition: all 0.3s ease;
+	border: 1px solid #dbd8ffbc;
+	color: #003eba;
+	&:hover {
+		box-shadow: 0px 0px 5px 0px #f5f5f582;
+		transform: translateY(3px);
+	}
 	@media ${device.desktop} {
 		font-size: 14px;
 		padding: 16px;

@@ -14,13 +14,25 @@ const Title = styled.h3`
 	}
 `;
 
+const StyledP1 = styled.p`
+	font-size: 24px;
+	font-weight: 400;
+	@media ${device.tablet} {
+		font-size: 16px !important;
+	}
+`;
+
 const ProjectOverView = ({ curruntPage }) => {
 	const OverView =
 		curruntPage?.projectOverViewComp || curruntPage?.projectOverViewParag;
 	return (
 		<StyledProjectOverView>
 			<Title>Project Overview</Title>
-			{<OverView />}
+			{curruntPage?.projectOverViewComp ? (
+				<OverView />
+			) : (
+				<StyledP1>{curruntPage?.projectOverViewParag}</StyledP1>
+			)}
 		</StyledProjectOverView>
 	);
 };

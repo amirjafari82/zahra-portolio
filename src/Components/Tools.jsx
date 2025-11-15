@@ -5,7 +5,7 @@ import { device } from "../styles/breakpoints";
 const StyledTools = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
-	border: 1px solid #dadada;
+	border: 6px solid #e6e4ff;
 	padding: 40px;
 	flex-basis: 60%;
 `;

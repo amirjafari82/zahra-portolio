@@ -26,6 +26,11 @@ const StyledIntro = styled.div`
 		> p {
 			gap: 4px;
 		}
+
+		> p > svg {
+			width: 46px;
+			height: 46px;
+		}
 	}
 `;
 
