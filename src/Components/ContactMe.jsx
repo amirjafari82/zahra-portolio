@@ -36,7 +36,15 @@ const Logo = styled.div`
 	text-align: center;
 `;
 
-const StyledSvg = styled.img``;
+const StyledSvg = styled.img`
+	@media ${device.tablet} {
+		width: 250px;
+	}
+
+	@media ${device.mobile} {
+		width: 100%;
+	}
+`;
 
 const contactItems = [
 	{
@@ -64,6 +72,13 @@ const StyledItems = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin-top: 24px;
+	@media ${device.tablet} {
+		gap: 16px;
+	}
+
+	@media ${device.mobile} {
+		gap: 8px;
+	}
 `;
 
 const StyledItem = styled.div`
@@ -73,6 +88,17 @@ const StyledItem = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@media ${device.tablet} {
+		padding: 12px;
+		> svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	@media ${device.mobile} {
+		padding: 8px;
+	}
 `;
 
 const ContactMe = () => {

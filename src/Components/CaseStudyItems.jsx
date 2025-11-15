@@ -35,7 +35,7 @@ const StyledCaseStudyItems = styled.div`
 	width: 100%;
 	flex-wrap: wrap;
 	gap: 28px;
-	align-items: center;
+	align-items: stretch;
 	@media ${device.laptop} {
 		flex-direction: column;
 	}

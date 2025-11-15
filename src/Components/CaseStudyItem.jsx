@@ -36,7 +36,9 @@ const BottomSection = styled.div`
 const StyledIntro = styled.div`
 	display: flex;
 	flex-direction: column;
+	justify-content: space-evenly;
 	gap: 16px;
+	height: 200px;
 `;
 
 const StyledTitle = styled.h4`
