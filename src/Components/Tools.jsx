@@ -7,7 +7,7 @@ const StyledTools = styled.div`
 	border-radius: 56px;
 	border: 6px solid #e6e4ff;
 	padding: 40px;
-	flex-basis: 60%;
+	flex-basis: 40%;
 `;
 
 const StyledHeader = styled.h4`
