@@ -17,7 +17,7 @@ const ProjectDesc = ({ curruntPage }) => {
 			<Problem {...{ curruntPage }} />
 			<Research {...{ curruntPage }} />
 			<Design {...{ curruntPage }} />
-			{/* <UsabilityTesting {...{ curruntPage }} /> */}
+			<UsabilityTesting {...{ curruntPage }} />
 		</StyledProjectDesc>
 	);
 };
