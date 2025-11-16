@@ -123,7 +123,7 @@ const ToolsItems = styled.div`
 const HeaderImage = styled.img`
 	@media ${device.desktopLgMid} {
 		width: ${(props) => props?.imgdesktopLgMidRespWidth || "40%"};
-		height: 40%;
+		height: 100%;
 		margin: 0 auto !important;
 	}
 	@media ${device.tablet} {
