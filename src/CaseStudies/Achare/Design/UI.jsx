@@ -68,6 +68,9 @@ const Title = styled.span`
 
 const Image = styled.img`
 	width: 50%;
+	@media ${device.tablet} {
+		width: 100%;
+	}
 `;
 
 const ContentSec = styled.div`
