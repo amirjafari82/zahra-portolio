@@ -1,3 +1,4 @@
+import AchareResearch from "./Achare/Research/AchareResearch";
 import Design from "./App100/Design/App100Design";
 import App100Research from "./App100/Research/App100Research";
 import JavidaanDesign from "./Javidaan/Design/JavidaanDesign";
@@ -65,7 +66,7 @@ export const caseItems = {
 	},
 	Nabz: {
 		header: {
-			title: "Designing a Doctor Appointment App ",
+			title: "Designing a <strong>Doctor Appointment App</strong>",
 			date: "2025",
 			device: "Web",
 			role: "Product Designer",
@@ -96,14 +97,29 @@ export const caseItems = {
 	},
 	Achare: {
 		header: {
-			title: "Redesigning a service app",
+			title: "Improving the <strong>service request process</strong>",
 			date: "2025",
 			device: "Web",
 			role: "Product Designer",
-			bgColor: "#F7F7F7",
-			tools: [Figma, Maze, PhotoShop, Meet],
+			textColor: "#fff",
+			bgStyle: {
+				background: "linear-gradient(269.84deg, #05B49D 0.13%, #047365 99.87%)",
+			},
+			tools: [Figma, PhotoShop, Meet],
 			image: "../images/pageImages/Achare.png",
 			imgHeight: "444px",
 		},
+		projectOverViewParag: `Achare is an online platform that connects people with local service providers, helping users save time,
+  		reduce costs, and make everyday life easier. The goal of this project was to increase user engagement on
+  		the Achare website. Through the design process, we discovered that streamlining and speeding up the
+  		service request flow could significantly improve the overall user experience — which became the main focus
+  		of the redesign.`,
+		problem: `The stakeholders recognized a clear need at the outset of this project: 
+		scheduling a doctor's appointment was frequently difficult, 
+		time-consuming, and frustrating, particularly for senior citizens. 
+		The idea was to create an app that makes everything easier, 
+		from scheduling an appointment to locating the best doctor, 
+		by providing a simple, easy-to-use interface that saves time and lowers stress.`,
+		research: AchareResearch,
 	},
 };
