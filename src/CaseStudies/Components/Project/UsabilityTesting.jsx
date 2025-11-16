@@ -18,7 +18,7 @@ const UsabilityTesting = ({ curruntPage }) => {
 	return (
 		<div>
 			<Title>Usability Testing</Title>
-			{<CurruntUsability />}
+			{CurruntUsability && <CurruntUsability />}
 		</div>
 	);
 };
