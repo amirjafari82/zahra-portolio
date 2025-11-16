@@ -23,10 +23,10 @@ const StyledH4 = styled.h4`
 `;
 
 const StyledP1 = styled.p`
-	font-size: 20px;
+	font-size: 16px;
 	margin-bottom: 24px;
 	@media ${device.tablet} {
-		font-size: 16px !important;
+		font-size: 14px !important;
 	}
 `;
 

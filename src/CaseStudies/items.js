@@ -1,3 +1,4 @@
+import AchareDesign from "./Achare/Design/AchareDesign";
 import AchareResearch from "./Achare/Research/AchareResearch";
 import Design from "./App100/Design/App100Design";
 import App100Research from "./App100/Research/App100Research";
@@ -121,5 +122,6 @@ export const caseItems = {
 		from scheduling an appointment to locating the best doctor, 
 		by providing a simple, easy-to-use interface that saves time and lowers stress.`,
 		research: AchareResearch,
+		design: AchareDesign,
 	},
 };

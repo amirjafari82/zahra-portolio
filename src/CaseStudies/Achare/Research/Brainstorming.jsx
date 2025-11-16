@@ -64,10 +64,10 @@ const StyledH4 = styled.h4`
 `;
 
 const StyledP1 = styled.p`
-	font-size: 20px;
+	font-size: 16px;
 	margin-bottom: 24px;
 	@media ${device.tablet} {
-		font-size: 16px !important;
+		font-size: 14px !important;
 	}
 `;
 
@@ -118,6 +118,9 @@ const StyledUL = styled.ul`
 
 const StyledLI = styled.li`
 	font-size: 18px;
+	@media ${device.tablet} {
+		font-size: 14px;
+	}
 `;
 
 const StyledLeftRight = styled.div`
@@ -128,7 +131,7 @@ const StyledLeftRight = styled.div`
 	}
 `;
 
-const Brainstorming = (props) => {
+const Brainstorming = () => {
 	return (
 		<StyledMain>
 			<StyledH4>Brainstorming</StyledH4>
