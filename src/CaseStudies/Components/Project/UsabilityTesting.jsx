@@ -16,10 +16,14 @@ const Title = styled.h3`
 const UsabilityTesting = ({ curruntPage }) => {
 	const CurruntUsability = curruntPage?.usabilityTesting;
 	return (
-		<div>
-			<Title>Usability Testing</Title>
-			{CurruntUsability && <CurruntUsability />}
-		</div>
+		<>
+			{CurruntUsability && (
+				<div>
+					<Title>Usability Testing</Title>
+					{<CurruntUsability />}
+				</div>
+			)}
+		</>
 	);
 };
 
