@@ -123,12 +123,12 @@ const ToolsItems = styled.div`
 const HeaderImage = styled.img`
 	@media ${device.desktopLgMid} {
 		width: ${(props) => props?.imgdesktopLgMidRespWidth || "40%"};
-		height: 100%;
+		height: auto;
 		margin: 0 auto !important;
 	}
 	@media ${device.tablet} {
 		width: ${(props) => props?.imgtabletrespwidth || "100%"};
-		height: 100%;
+		height: auto;
 	}
 `;
 
