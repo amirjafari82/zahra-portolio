@@ -69,29 +69,29 @@ const Tools = () => {
 			<StyledHeader>Tools</StyledHeader>
 			<Images>
 				<One>
-					<Logo id="Figma" src="./images/Figma.png" width={80} height={80} />
+					<Logo id="Figma" src="./images/Figma.png" width={60} height={60} />
 				</One>
 				<Multiple>
 					<Logo
 						src="./images/IDK.jpg"
 						style={{ borderRadius: "16px" }}
-						width={80}
-						height={80}
+						width={60}
+						height={60}
 					/>
 					<Logo
 						id="Illustrator"
 						src="./images/Illustrator.png"
-						width={90}
-						height={90}
+						width={70}
+						height={70}
 					/>
-					<Logo src="./images/PhotoShop.png" width={80} height={80} />
+					<Logo src="./images/PhotoShop.png" width={60} height={60} />
 				</Multiple>
 				<One>
 					<Logo
 						id="Clarity"
 						src="./images/Clarity.png"
-						width={70}
-						height={70}
+						width={55}
+						height={55}
 						style={{
 							borderRadius: "16px",
 							border: "1px solid #C2C2C2",
