@@ -5,6 +5,7 @@ import App100Research from "./App100/Research/App100Research";
 import JavidaanDesign from "./Javidaan/Design/JavidaanDesign";
 import JavidaanOverView from "./Javidaan/ProjectOverView/JavidaanOverView";
 import JavidaanResearch from "./Javidaan/Research/JavidaanResearch";
+import JavidaanUsabilityTesting from "./Javidaan/UsabilityTesting/JavidaanUsabilityTesting";
 import NabzDesign from "./Nabz/Design/NabzDesign";
 import NabzResearch from "./Nabz/Research/NabzResearch";
 import NabzUsabilityTesting from "./Nabz/UsabilityTesting/NabzUsabilityTesting";
@@ -41,6 +42,7 @@ export const caseItems = {
 			it needed to be smooth, simple, and efficient — but still powerful enough to handle complex insights.`,
 		research: JavidaanResearch,
 		design: JavidaanDesign,
+		usabilityTesting: JavidaanUsabilityTesting,
 	},
 	App100: {
 		header: {

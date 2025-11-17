@@ -24,6 +24,7 @@ const Images = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
+	margin-top: -40px;
 	@media ${device.mobile} {
 		gap: 20px;
 	}

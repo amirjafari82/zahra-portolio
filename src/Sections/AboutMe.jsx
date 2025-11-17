@@ -5,7 +5,7 @@ import { device } from "../styles/breakpoints";
 
 const StyledAboutMe = styled.div`
 	margin-top: 40px;
-	border: 6px solid #E6E4FF;
+	border: 6px solid #e6e4ff;
 	background-color: #fff;
 	border-radius: 56px;
 	display: flex;
@@ -16,10 +16,10 @@ const StyledAboutMe = styled.div`
 `;
 
 const LeftSide = styled.div`
-	padding: 40px 40px 20px 40px;
+	padding: 40px 40px 40px 40px;
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 16px;
 	flex-basis: 60%;
 `;
 
@@ -52,7 +52,7 @@ const Header = styled.p`
 `;
 
 const HeaderBold = styled.span`
-	font-size: 40px;
+	font-size: 24px;
 	font-weight: 600;
 	@media ${device.tablet} {
 		font-size: 24px;
@@ -71,12 +71,12 @@ const Bold = styled.span`
 `;
 
 const MoreButton = styled.button`
-	margin-top: -10px;
+	margin-top: 12px;
 	width: fit-content;
 	background-color: #fff;
-	padding: 24px;
+	padding: 20px 32px;
 	border-radius: 56px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #1203df;
 	cursor: pointer;
@@ -101,7 +101,7 @@ const AboutMe = () => {
 		<StyledAboutMe id="about_me">
 			<LeftSide>
 				<Header>
-					About<HeaderBold> Me</HeaderBold>
+					<HeaderBold>About Me</HeaderBold>
 				</Header>
 				<Paragraph>
 					<Bold>Over the past year</Bold>, I've worked on{" "}
@@ -128,9 +128,9 @@ const AboutMe = () => {
 					More Details On LinkedIn <More width={50} height={35} />
 				</MoreButton>
 			</LeftSide>
-			<ImageSide>
+			{/* <ImageSide>
 				<Image src="./images/Sample.png" width={655} height={650} />
-			</ImageSide>
+			</ImageSide> */}
 		</StyledAboutMe>
 	);
 };

@@ -25,7 +25,7 @@ const StyledHeader = styled.h4`
 `;
 
 const StyledHeaderBold = styled.span`
-	font-size: 32px;
+	font-size: 24px;
 	font-weight: 600;
 	@media ${device.tablet} {
 		font-size: 20px;
@@ -128,8 +128,7 @@ const ContactMe = () => {
 	return (
 		<StyledContactMe>
 			<StyledHeader>
-				<StyledHeaderBold>Contact </StyledHeaderBold>
-				Me
+				<StyledHeaderBold>Contact Me</StyledHeaderBold>
 			</StyledHeader>
 			<Logo>
 				<StyledSvg src="./images/ContactMe.svg" />

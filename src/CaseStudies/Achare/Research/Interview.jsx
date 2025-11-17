@@ -55,7 +55,7 @@ const StyledItem = styled.p`
 	color: #414141;
 `;
 
-const Interview = (props) => {
+const Interview = () => {
 	return (
 		<div>
 			<StyledH4>Interview</StyledH4>

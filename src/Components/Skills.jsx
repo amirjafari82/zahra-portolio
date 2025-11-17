@@ -7,7 +7,7 @@ const StyledSkills = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
 	padding: 26px 20px;
-	border: 6px solid #E6E4FF;
+	border: 6px solid #e6e4ff;
 	flex-grow: 0.45;
 	/* flex-basis: 40%; */
 `;
@@ -15,16 +15,16 @@ const StyledSkills = styled.div`
 const StyledHeader = styled.h4`
 	font-size: 24px;
 	font-weight: 600;
-    padding: 14px 16px;
+	padding: 14px 16px;
 	@media ${device.tablet} {
-			font-size: 20px;
-		}
+		font-size: 20px;
+	}
 `;
 
 const StyledDesc = styled.div`
 	display: flex;
-    justify-content: center;
-    align-items: end;
+	justify-content: center;
+	align-items: end;
 	width: 100%;
 `;
 
@@ -33,7 +33,11 @@ const Skills = () => {
 		<StyledSkills>
 			<StyledHeader>Skills</StyledHeader>
 			<StyledDesc>
-				<SkillsSvg />
+				<SkillsSvg
+					style={{
+						marginTop: "48px",
+					}}
+				/>
 			</StyledDesc>
 		</StyledSkills>
 	);

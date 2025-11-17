@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../Sections/Header";
 import styled from "styled-components";
 import HeroSection from "../Sections/HeroSection";
