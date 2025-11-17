@@ -87,7 +87,11 @@ const JavidaanResearch = () => {
 				{researchItems?.map((item) => {
 					return (
 						<StyledResearchItem>
-							<Register />
+							<Register
+								style={{
+									flexShrink: 0,
+								}}
+							/>
 							<p
 								style={{
 									fontSize: "18px",

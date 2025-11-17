@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Sections/Header";
 import styled from "styled-components";
 import HeroSection from "../Sections/HeroSection";
@@ -8,6 +8,7 @@ import ProfileSummary from "../Sections/ProfileSummary";
 import AboutMe from "../Sections/AboutMe";
 import ScrollToTop from "../Components/ScrollToTop";
 import { device } from "../styles/breakpoints";
+import ScrollDefault from "../Components/ScrollDefault";
 
 const Main = styled.div`
 	padding: 32px 160px;
@@ -21,13 +22,14 @@ const Home = () => {
 	const [showScroll, setShowScroll] = useState(false);
 	return (
 		<Main id="main">
+			<ScrollDefault />
 			<Header {...{ setShowScroll }} />
 			<HeroSection />
 			<LastProjects />
 			<CaseStudies />
 			<ProfileSummary />
 			<AboutMe />
-			{/* <ScrollToTop {...{ showScroll, setShowScroll }} /> */}
+			<ScrollToTop {...{ showScroll, setShowScroll }} />
 		</Main>
 	);
 };

@@ -11,12 +11,12 @@ const StyledTools = styled.div`
 `;
 
 const StyledHeader = styled.h4`
-	font-size: 32px;
+	font-size: 24px;
 	font-weight: 600;
-	margin-bottom: 48px;
+    padding: 14px 16px;
 	@media ${device.tablet} {
-		font-size: 20px;
-	}
+			font-size: 20px;
+		}
 `;
 
 const Images = styled.div`

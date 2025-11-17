@@ -118,7 +118,11 @@ const UI = () => {
 					{items.map((item, index) => {
 						return (
 							<Content key={index}>
-								<Tick />
+								<Tick
+									style={{
+										flexShrink: 0,
+									}}
+								/>
 								<Text>{item}</Text>
 							</Content>
 						);

@@ -1,7 +1,7 @@
 import * as React from "react";
 const SkillsSvg = (props) => (
   <svg
-    width={618}
+    width={'100%'}
     height={187}
     viewBox="0 0 618 187"
     fill="none"

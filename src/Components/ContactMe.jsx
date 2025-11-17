@@ -16,9 +16,9 @@ const StyledContactMe = styled.div`
 `;
 
 const StyledHeader = styled.h4`
-	font-size: 32px;
-	font-weight: 300;
-	margin-bottom: 48px;
+	font-size: 24px;
+	font-weight: 600;
+	padding: 14px 16px;
 	@media ${device.tablet} {
 		font-size: 20px;
 	}
@@ -37,12 +37,15 @@ const Logo = styled.div`
 `;
 
 const StyledSvg = styled.img`
+	margin-left: 200px;
 	@media ${device.tablet} {
 		width: 250px;
+		margin-left: 150px;
 	}
 
 	@media ${device.mobile} {
 		width: 100%;
+		margin-left: 0;
 	}
 `;
 
@@ -62,6 +65,7 @@ const contactItems = [
 	{
 		link: "",
 		icon: Message,
+		fill: "disable",
 	},
 ];
 
@@ -77,7 +81,7 @@ const StyledItems = styled.div`
 	}
 
 	@media ${device.mobile} {
-		gap: 8px;
+		gap: 24px;
 	}
 `;
 
@@ -88,6 +92,19 @@ const StyledItem = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	&:hover {
+		border: 1px solid #1203df;
+		> svg {
+			fill: ${(props) => (props.fill == "disable" ? "none" : "#1203DF")};
+			transition: all 0.3s ease;
+			> path {
+				transition: all 0.3s ease;
+				stroke: #1203df;
+			}
+		}
+	}
 	@media ${device.tablet} {
 		padding: 12px;
 		> svg {
@@ -98,6 +115,12 @@ const StyledItem = styled.div`
 
 	@media ${device.mobile} {
 		padding: 8px;
+		width: 50px;
+		height: 50px;
+		> svg {
+			width: 36px;
+			height: 36px;
+		}
 	}
 `;
 
@@ -115,7 +138,7 @@ const ContactMe = () => {
 				{contactItems.map((item) => {
 					const Icon = item.icon;
 					return (
-						<StyledItem>
+						<StyledItem fill={item?.fill}>
 							<Icon />
 						</StyledItem>
 					);

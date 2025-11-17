@@ -8,12 +8,12 @@ const StyledSkills = styled.div`
 	border-radius: 56px;
 	padding: 26px 20px;
 	border: 6px solid #E6E4FF;
-	/* flex-grow: 0.45; */
-	flex-basis: 40%;
+	flex-grow: 0.45;
+	/* flex-basis: 40%; */
 `;
 
 const StyledHeader = styled.h4`
-	font-size: 32px;
+	font-size: 24px;
 	font-weight: 600;
     padding: 14px 16px;
 	@media ${device.tablet} {
@@ -25,6 +25,7 @@ const StyledDesc = styled.div`
 	display: flex;
     justify-content: center;
     align-items: end;
+	width: 100%;
 `;
 
 const Skills = () => {
