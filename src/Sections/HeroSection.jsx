@@ -78,7 +78,7 @@ const StyledInfoP = styled.p`
 `;
 
 const StyledInfoPBold = styled.span`
-	font-weight: 700;
+	font-weight: 600;
 `;
 
 const HeroSection = () => {
@@ -92,15 +92,12 @@ const HeroSection = () => {
 					<StyledName>Jafarinasab</StyledName>
 				</p>
 			</StyledIntro>
-
 			<StyledInfo>
 				<StyledInfoP>
-					<StyledInfoPBold> product designer </StyledInfoPBold> with a creative
-					mindset, passionate about crafting{" "}
-					<StyledInfoPBold>
-						{" "}
-						innovative and enhanced user experiences.{" "}
-					</StyledInfoPBold>
+					A product designer focused{" "}
+					<StyledInfoPBold>on creating intuitive experiences</StyledInfoPBold>,
+					improving workflows, and delivering lasting impact through{" "}
+					<StyledInfoPBold>thoughtful design</StyledInfoPBold>.
 				</StyledInfoP>
 			</StyledInfo>
 		</StyledHero>

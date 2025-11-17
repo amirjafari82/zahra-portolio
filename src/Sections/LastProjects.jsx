@@ -33,7 +33,7 @@ const MoreButton = styled.button`
 	border: none;
 	gap: 10px;
 	justify-content: center;
-	margin: 32px auto 0px auto;
+	margin: 0px auto 0px auto;
 	color: #003eba;
 	font-size: 20px;
 	font-weight: 600;

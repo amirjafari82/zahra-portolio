@@ -19,7 +19,6 @@ const StyledCarousel = styled.div`
 	gap: 32px;
 	overflow: hidden;
 	align-items: center;
-	margin-top: 40px;
 	position: relative;
 	&::before,
 	&::after {

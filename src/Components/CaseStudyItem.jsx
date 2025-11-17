@@ -48,6 +48,7 @@ const StyledTitle = styled.h4`
 	color: #040111;
 	@media ${device.mobile} {
 		font-size: 14px;
+		width: 120%;
 	}
 `;
 

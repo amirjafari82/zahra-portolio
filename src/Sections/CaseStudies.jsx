@@ -5,7 +5,7 @@ import More from "../assets/icons/More";
 import { device } from "../styles/breakpoints";
 
 const StyledCaseStudies = styled.div`
-	margin-top: 164px;
+	margin-top: 96px;
 	@media ${device.mobile} {
 		font-size: 24px;
 		margin-top: 42px;
@@ -13,7 +13,7 @@ const StyledCaseStudies = styled.div`
 `;
 
 const Header = styled.h3`
-	margin-bottom: 40px;
+	margin-bottom: 24px;
 	font-size: 32px;
 	font-weight: 400;
 	text-align: center;
