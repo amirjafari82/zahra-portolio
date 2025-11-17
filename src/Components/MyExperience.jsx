@@ -142,7 +142,7 @@ const StyledItem = styled.div`
 
 const MyExperience = () => {
 	return (
-		<StyledMyExperience>
+		<StyledMyExperience id="my_expriences">
 			<StyledHeader>
 				<StyledHeaderBold>My Experiences</StyledHeaderBold>
 			</StyledHeader>

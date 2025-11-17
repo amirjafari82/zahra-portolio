@@ -18,8 +18,6 @@ const CaseStudy = () => {
 
 	const curruntPage = caseItems[caseStudy];
 
-	console.log(curruntPage);
-
 	return (
 		<StyledCaseStudy>
 			<Header {...{ curruntPage }} />

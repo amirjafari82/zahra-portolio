@@ -81,7 +81,7 @@ const items = [
 	},
 	{
 		name: "My Expriences",
-		link: "#",
+		link: "my_expriences",
 	},
 	{
 		name: "Contact Me",
@@ -98,7 +98,6 @@ export default function Header({ setShowScroll }) {
 					<StyledItem
 						onClick={() => {
 							const element = document.getElementById(i.link);
-							console.log(i.link);
 							element.scrollIntoView({ behavior: "smooth", block: "center" });
 							setShowScroll(true);
 						}}
