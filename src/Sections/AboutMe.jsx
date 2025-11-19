@@ -20,6 +20,9 @@ const LeftSide = styled.div`
 	flex-direction: column;
 	gap: 16px;
 	flex-basis: 60%;
+	@media ${device.tablet} {
+		padding: 40px;
+	}
 `;
 
 const ImageSide = styled.div`

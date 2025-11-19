@@ -9,6 +9,10 @@ const StyledMyExperience = styled.div`
 	border: 6px solid #e6e4ff;
 	padding: 80px;
 	width: calc(100% - 172px);
+	@media ${device.tablet} {
+		padding: 40px;
+		width: calc(100% - 92px);
+	}
 `;
 
 const StyledHeader = styled.h4`

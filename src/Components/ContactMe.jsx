@@ -23,7 +23,6 @@ const StyledContactMe = styled.div`
 const StyledHeader = styled.h4`
 	font-size: 24px;
 	font-weight: 600;
-	padding: 14px 16px;
 	@media ${device.tablet} {
 		font-size: 20px;
 	}
