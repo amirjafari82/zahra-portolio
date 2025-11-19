@@ -47,7 +47,7 @@ const StyledImage = styled.img`
 
 const ImageWrapper = styled.div`
 	position: relative;
-	flex: 0 0 auto; /* VERY important */
+	flex: 0 0 auto;
 	display: flex;
 	justify-content: center;
 	@media ${device.mobile} {
@@ -71,7 +71,6 @@ const Carousel = () => {
 	const carouselRef = useRef(null);
 	const drag = useRef({ isDragging: false, startX: 0, scrollLeft: 0 });
 
-	// Robust scrollToImage using getBoundingClientRect
 	const scrollToImage = (index) => {
 		const carousel = carouselRef.current;
 		const imageEl = document.getElementById(`carousel-${index}`);
@@ -80,18 +79,14 @@ const Carousel = () => {
 		const carouselRect = carousel.getBoundingClientRect();
 		const imageRect = imageEl.getBoundingClientRect();
 
-		// center positions in viewport coordinates
 		const carouselCenter = carouselRect.left + carouselRect.width / 2;
 		const imageCenter = imageRect.left + imageRect.width / 2;
 
-		// how much we need to move the carousel's scrollLeft (positive = scroll right)
 		const delta = imageCenter - carouselCenter;
 
-		// animate horizontally without affecting page vertical scroll
 		carousel.scrollBy({ left: delta, behavior: "smooth" });
 	};
 
-	// ----- wheel handler -----
 	useEffect(() => {
 		const box = carouselRef.current;
 		if (!box) return;
@@ -122,7 +117,6 @@ const Carousel = () => {
 		return () => box.removeEventListener("wheel", handleWheel);
 	}, []);
 
-	// ----- drag & touch handlers -----
 	useEffect(() => {
 		const carousel = carouselRef.current;
 		if (!carousel) return;
@@ -145,7 +139,6 @@ const Carousel = () => {
 			if (!drag.current.isDragging) return;
 			drag.current.isDragging = false;
 
-			// children wrappers -> image elements
 			const wrappers = Array.from(carousel.children);
 			const children = wrappers.map((w) => w.querySelector("img"));
 
@@ -155,7 +148,6 @@ const Carousel = () => {
 
 			children.forEach((child, idx) => {
 				if (!child) return;
-				// compute child center relative to carousel scroll
 				const childCenter = child.offsetLeft + child.offsetWidth / 2;
 				const distance = Math.abs(carouselCenter - childCenter);
 				if (distance < minDistance) {
@@ -168,13 +160,11 @@ const Carousel = () => {
 			scrollToImage(closestIndex);
 		};
 
-		// mouse
 		carousel.addEventListener("mousedown", startDrag);
 		carousel.addEventListener("mousemove", onDrag);
 		window.addEventListener("mouseup", stopDrag);
 		carousel.addEventListener("mouseleave", stopDrag);
 
-		// touch
 		carousel.addEventListener("touchstart", startDrag, { passive: true });
 		carousel.addEventListener("touchmove", onDrag, { passive: false });
 		window.addEventListener("touchend", stopDrag);
@@ -191,7 +181,6 @@ const Carousel = () => {
 		};
 	}, []);
 
-	// ----- auto-scroll interval -----
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setImage((prev) => {

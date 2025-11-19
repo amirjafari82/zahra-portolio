@@ -25,10 +25,9 @@ const Home = () => {
 			<ScrollDefault />
 			<Header {...{ setShowScroll }} />
 			<HeroSection />
-			<LastProjects />
 			<CaseStudies />
+			<LastProjects />
 			<ProfileSummary />
-			<AboutMe />
 			<ScrollToTop {...{ showScroll, setShowScroll }} />
 		</Main>
 	);

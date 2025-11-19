@@ -5,6 +5,7 @@ import Skills from "../Components/Skills";
 import Tools from "../Components/Tools";
 import ContactMe from "../Components/ContactMe";
 import { device } from "../styles/breakpoints";
+import AboutMe from "./AboutMe";
 
 const StyledProfileSummary = styled.div`
 	margin-top: 94px;
@@ -26,10 +27,9 @@ const Sec = styled.div`
 const ProfileSummary = () => {
 	return (
 		<StyledProfileSummary id="profile_summary">
-			<Sec>
-				<MyExperience />
-				<Skills />
-			</Sec>
+			<MyExperience />
+			{/* <Skills /> */}
+			<AboutMe />
 			<Sec>
 				<Tools />
 				<ContactMe />

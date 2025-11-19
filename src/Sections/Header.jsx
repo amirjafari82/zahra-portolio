@@ -10,8 +10,8 @@ const StyledHeader = styled.header`
 `;
 
 const StyledImage = styled.img`
-	width: 102px;
-	height: 102px;
+	width: 80px;
+	height: 80px;
 	border-radius: 100%;
 	@media ${device.desktop} {
 		width: 80px;
@@ -28,6 +28,7 @@ const StyledNavbar = styled.div`
 	padding: 27px 40px;
 	border-radius: 100px;
 	box-shadow: 0px 4px 0px 0px #d9d9d9;
+	margin-left: 88px;
 	@media ${device.desktop} {
 		display: none;
 	}

@@ -5,13 +5,14 @@ import More from "../assets/icons/More";
 import { device } from "../styles/breakpoints";
 
 const StyledLastProject = styled.div`
-	margin-top: 64px;
+	margin-top: 80px;
 	text-align: center;
 `;
 
 const LastHeader = styled.h3`
 	font-size: 32px;
 	font-weight: 300;
+	margin-bottom: 32px;
 	@media ${device.desktopLg} {
 		font-size: 24px;
 	}
@@ -41,6 +42,7 @@ const MoreButton = styled.button`
 	box-shadow: 0px 6px 0px 0px #dbd8ff;
 	transition: all 0.3s ease;
 	border: 1px solid #dbd8ffbc;
+	margin-top: 32px;
 	&:hover {
 		box-shadow: 0px 0px 5px 0px #f5f5f582;
 		transform: translateY(3px);
@@ -54,7 +56,7 @@ const LastProjects = () => {
 	return (
 		<StyledLastProject>
 			<LastHeader>
-				UI <LastHeaderBold>Projects</LastHeaderBold>
+				<LastHeaderBold>UI Projects</LastHeaderBold>
 			</LastHeader>
 			<Carousel />
 			<MoreButton>

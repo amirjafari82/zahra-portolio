@@ -8,7 +8,7 @@ const StyledMyExperience = styled.div`
 	border-radius: 56px;
 	border: 6px solid #e6e4ff;
 	padding: 40px;
-	flex-basis: 60%;
+	width: calc(100% - 92px);
 `;
 
 const StyledHeader = styled.h4`
@@ -44,12 +44,28 @@ const Line = styled.div`
 const StyledInfo = styled.span`
 	color: ${(props) => props.color};
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 18px;
+	flex-wrap: nowrap;
 	display: flex;
 	align-items: center;
 	gap: 21px;
+	flex-shrink: 0;
+	@media (max-width: 821px) {
+		font-size: 16px;
+	}
 	@media ${device.tablet} {
 		font-size: 14px;
+	}
+`;
+
+const StyledInfoDiv = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	@media (max-width: 620px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 `;
 
@@ -63,17 +79,41 @@ const Dot = styled.div`
 
 const Line2 = styled.div`
 	width: 2px;
-	height: 80%;
+	height: 85%;
 	background-color: #000;
 	position: absolute;
 	top: 16px;
 	left: 3px;
-	@media (max-width: 1776px) {
+	@media (max-width: 821px) {
+		height: 84%;
+		top: 24px;
+	}
+	@media (max-width: 620px) {
+		height: 76%;
+		top: 48px;
+	}
+	@media (max-width: 464px) {
+		height: 78%;
+		top: 48px;
+	}
+	@media (max-width: 447px) {
+		height: 78%;
+		top: 52px;
+	}
+	@media (max-width: 436px) {
+		height: 76%;
+		top: 64px;
+	}
+	@media (max-width: 384px) {
+		height: 76%;
+		top: 72px;
+	}
+	/* @media (max-width: 1776px) {
 		height: 82%;
 		top: 16px;
 		left: 3px;
-	}
-	@media (max-width: 1655px) {
+	} */
+	/* @media (max-width: 1655px) {
 		height: 82%;
 		top: 28px;
 		left: 3px;
@@ -91,10 +131,7 @@ const Line2 = styled.div`
 		height: 78%;
 		top: 18px;
 	}
-	@media (max-width: 795px) {
-		height: 82%;
-		top: 18px;
-	}
+	
 	@media (max-width: 768px) {
 		height: 84%;
 		top: 14px;
@@ -114,7 +151,7 @@ const Line2 = styled.div`
 	@media (max-width: 335px) {
 		height: 90%;
 		top: 24px;
-	}
+	} */
 `;
 
 const items = [
@@ -127,7 +164,7 @@ const StyledItems = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: start;
-	margin-bottom: 16px;
+	margin-bottom: 56px;
 	margin-top: 8px;
 	gap: 4px;
 `;
@@ -138,6 +175,29 @@ const StyledItem = styled.div`
 	margin-left: 32px;
 	gap: 6px;
 	color: #727272;
+	@media (max-width: 821px) {
+		font-size: 14px;
+	}
+	@media ${device.tablet} {
+		font-size: 12px;
+	}
+`;
+
+const Logo = styled.div`
+	background-color: #001287;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+`;
+
+const AminaLogo = styled.img`
+	width: 23px;
+	height: 19px;
+	flex-shrink: 0;
 `;
 
 const MyExperience = () => {
@@ -154,7 +214,13 @@ const MyExperience = () => {
 						UI/UX Designer
 					</StyledInfo>
 					<Dashed />
-					<StyledInfo>2024-Present</StyledInfo>
+					<StyledInfoDiv>
+						<StyledInfo>2024-Present ,</StyledInfo>
+						<Logo>
+							<AminaLogo src="../images/aminagroup-logo-1 1.png" />
+						</Logo>
+						<StyledInfo>Amina Group</StyledInfo>
+					</StyledInfoDiv>
 				</Line>
 				<StyledItems>
 					{items?.map((item) => (

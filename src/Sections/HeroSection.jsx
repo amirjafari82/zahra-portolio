@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Zahra from "../assets/icons/Zahra";
 import { device } from "../styles/breakpoints";
+import More from "../assets/icons/More";
 
 const StyledHero = styled.div`
-	margin-top: 40px;
+	margin-top: 66px;
 	text-align: center;
 `;
 
@@ -50,30 +51,24 @@ const StyledName = styled.span`
 `;
 
 const StyledInfo = styled.div`
-	background: linear-gradient(
-		90deg,
-		#f7f8f9 0%,
-		rgb(136 157 255 / 31%) 50%,
-		#f7f8f9 100%
-	);
-	border: 1px solid #a6bcff;
 	background-color: #fff;
-	padding: 40px 8px;
+	padding: 24px 16px;
 	border-radius: 56px;
 	margin-top: 24px;
 	width: 65%;
+	box-shadow: 0px 6px 0px 0px #d3dbff;
 	margin-right: auto;
 	margin-left: auto;
 	@media ${device.desktop} {
-		width: calc(100% - 16px);
+		width: calc(100% - 32px);
 	}
 `;
 
 const StyledInfoP = styled.p`
 	width: 100%;
-	font-size: 32px;
-	@media ${device.desktop} {
-		font-size: 20px;
+	font-size: 20px;
+	@media ${device.tablet} {
+		font-size: 16px;
 	}
 `;
 
@@ -81,15 +76,27 @@ const StyledInfoPBold = styled.span`
 	font-weight: 600;
 `;
 
+const StyledReadMore = styled.div`
+	margin-top: 16px;
+`;
+
+const StyledMore = styled.p`
+	display: flex;
+	align-items: center;
+	color: #003eba;
+	font-size: 18px;
+	justify-content: center;
+	gap: 8px;
+	cursor: pointer;
+`;
+
 const HeroSection = () => {
 	return (
 		<StyledHero>
 			<StyledIntro>
 				<p>
-					<span style={{}}>Hi, This is</span>
-					<StyledName>Zahra</StyledName>
-					<Zahra />
-					<StyledName>Jafarinasab</StyledName>
+					<span>Hi, This is</span>
+					<StyledName>Zahra Jafarinasab</StyledName>
 				</p>
 			</StyledIntro>
 			<StyledInfo>
@@ -99,6 +106,16 @@ const HeroSection = () => {
 					improving workflows, and delivering lasting impact through{" "}
 					<StyledInfoPBold>thoughtful design</StyledInfoPBold>.
 				</StyledInfoP>
+				<StyledReadMore>
+					<StyledMore
+						onClick={() => {
+							const element = document.getElementById("about_me");
+							element.scrollIntoView({ behavior: "smooth", block: "center" });
+						}}
+					>
+						Read More <More width={41} height={26} />
+					</StyledMore>
+				</StyledReadMore>
 			</StyledInfo>
 		</StyledHero>
 	);

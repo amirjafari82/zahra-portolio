@@ -9,6 +9,18 @@ import { device } from "../styles/breakpoints";
 const StyledCaseStudy = styled.div`
 	margin: 124px 160px;
 	@media ${device.desktopLgMore} {
+		margin: 62px 132px;
+	}
+
+	@media ${device.laptop} {
+		margin: 62px 62px;
+	}
+
+	@media ${device.tablet} {
+		margin: 24px 32px;
+	}
+
+	@media ${device.mobile} {
 		margin: 24px 16px;
 	}
 `;

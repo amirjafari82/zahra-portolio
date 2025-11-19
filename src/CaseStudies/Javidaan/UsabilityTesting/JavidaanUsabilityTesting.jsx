@@ -35,9 +35,6 @@ const JavidaanUsabilityTesting = () => {
 				determined using user feedback and actual usage data. I have been in
 				charge of the ongoing iteration and improvement process.
 			</StyledP1>
-			<StyledCard>
-                <Image src="../../../images/pageImages/JavidaanUsability.png" />
-            </StyledCard>
 		</div>
 	);
 };

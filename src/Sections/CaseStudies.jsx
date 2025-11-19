@@ -5,15 +5,15 @@ import More from "../assets/icons/More";
 import { device } from "../styles/breakpoints";
 
 const StyledCaseStudies = styled.div`
-	margin-top: 96px;
+	margin-top: 80px;
 	@media ${device.mobile} {
 		font-size: 24px;
-		margin-top: 42px;
+		margin-top: 40px;
 	}
 `;
 
 const Header = styled.h3`
-	margin-bottom: 24px;
+	margin-bottom: 32px;
 	font-size: 32px;
 	font-weight: 400;
 	text-align: center;
