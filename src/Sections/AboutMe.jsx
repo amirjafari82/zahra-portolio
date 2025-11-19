@@ -4,7 +4,6 @@ import More from "../assets/icons/More";
 import { device } from "../styles/breakpoints";
 
 const StyledAboutMe = styled.div`
-	margin-top: 40px;
 	border: 6px solid #e6e4ff;
 	background-color: #fff;
 	border-radius: 56px;
@@ -16,7 +15,7 @@ const StyledAboutMe = styled.div`
 `;
 
 const LeftSide = styled.div`
-	padding: 40px 40px 40px 40px;
+	padding: 80px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;

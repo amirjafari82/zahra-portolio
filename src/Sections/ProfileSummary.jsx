@@ -11,14 +11,14 @@ const StyledProfileSummary = styled.div`
 	margin-top: 94px;
 	display: flex;
 	flex-direction: column;
-	gap: 40px;
+	gap: 32px;
 `;
 
 const Sec = styled.div`
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	gap: 24px;
+	gap: 32px;
 	@media ${device.laptop} {
 		flex-direction: column;
 	}
@@ -28,10 +28,9 @@ const ProfileSummary = () => {
 	return (
 		<StyledProfileSummary id="profile_summary">
 			<MyExperience />
-			{/* <Skills /> */}
 			<AboutMe />
 			<Sec>
-				<Tools />
+				<Skills />
 				<ContactMe />
 			</Sec>
 		</StyledProfileSummary>

@@ -6,13 +6,18 @@ import LinkedIn from "../assets/icons/LinkedIn";
 import Behance from "../assets/icons/Behance";
 import Dribble from "../assets/icons/Dribble";
 import Message from "../assets/icons/Message";
+import Email from "../assets/icons/Email";
+import Phone from "../assets/icons/Phone";
 
 const StyledContactMe = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
-	padding: 40px;
+	padding: 80px;
 	border: 6px solid #e6e4ff;
 	flex-basis: 60%;
+	@media (max-width: 1730px) {
+		padding: 40px;
+	}
 `;
 
 const StyledHeader = styled.h4`
@@ -37,15 +42,13 @@ const Logo = styled.div`
 `;
 
 const StyledSvg = styled.img`
-	margin-left: 200px;
+	width: 100%;
 	@media ${device.tablet} {
 		width: 250px;
-		margin-left: 150px;
 	}
 
 	@media ${device.mobile} {
 		width: 100%;
-		margin-left: 0;
 	}
 `;
 
@@ -61,11 +64,6 @@ const contactItems = [
 	{
 		link: "",
 		icon: Dribble,
-	},
-	{
-		link: "",
-		icon: Message,
-		fill: "disable",
 	},
 ];
 
@@ -124,25 +122,89 @@ const StyledItem = styled.div`
 	}
 `;
 
+const Info = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	@media (max-width: 1730px) {
+		gap: 12px;
+	}
+`;
+
+const Content = styled.div`
+	display: flex;
+	flex-direction: row;
+	gap: 28px;
+	align-items: center;
+	> span {
+		font-size: 20px;
+	}
+	@media (max-width: 1730px) {
+		gap: 12px;
+	}
+
+	@media ${device.mobile} {
+		> span {
+			font-size: 16px;
+		}
+	}
+`;
+
+const Links = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+
+const Desc = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@media (max-width: 1730px) {
+		flex-direction: column;
+	}
+`;
+
 const ContactMe = () => {
 	return (
 		<StyledContactMe>
 			<StyledHeader>
 				<StyledHeaderBold>Contact Me</StyledHeaderBold>
 			</StyledHeader>
-			<Logo>
-				<StyledSvg src="./images/ContactMe.svg" />
-			</Logo>
-			<StyledItems>
-				{contactItems.map((item) => {
-					const Icon = item.icon;
-					return (
-						<StyledItem fill={item?.fill}>
-							<Icon />
-						</StyledItem>
-					);
-				})}
-			</StyledItems>
+			<Desc>
+				<Info>
+					<Content>
+						<Email
+							style={{
+								flexShrink: 0,
+							}}
+						/>
+						<span>zahrajfnsb@gmail.com</span>
+					</Content>
+					<Content>
+						<Phone
+							style={{
+								flexShrink: 0,
+							}}
+						/>
+						<span>+98-919735-0238</span>
+					</Content>
+				</Info>
+				<Links>
+					<Logo>
+						<StyledSvg src="./images/ContactMe.svg" />
+					</Logo>
+					<StyledItems>
+						{contactItems.map((item) => {
+							const Icon = item.icon;
+							return (
+								<StyledItem fill={item?.fill}>
+									<Icon />
+								</StyledItem>
+							);
+						})}
+					</StyledItems>
+				</Links>
+			</Desc>
 		</StyledContactMe>
 	);
 };

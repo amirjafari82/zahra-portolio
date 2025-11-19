@@ -7,8 +7,8 @@ const StyledMyExperience = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
 	border: 6px solid #e6e4ff;
-	padding: 40px;
-	width: calc(100% - 92px);
+	padding: 80px;
+	width: calc(100% - 172px);
 `;
 
 const StyledHeader = styled.h4`
