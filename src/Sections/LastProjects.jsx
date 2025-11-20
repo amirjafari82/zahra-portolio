@@ -25,7 +25,9 @@ const LastHeaderBold = styled.span`
 	}
 `;
 
-const MoreButton = styled.button`
+const MoreButton = styled.a`
+	width: fit-content;
+	text-decoration: none;
 	border-radius: 56px;
 	background-color: #fff;
 	display: flex;
@@ -59,7 +61,7 @@ const LastProjects = () => {
 				<LastHeaderBold>UI Projects</LastHeaderBold>
 			</LastHeader>
 			<Carousel />
-			<MoreButton>
+			<MoreButton href="https://dribbble.com/zahrajafarin" target="_blank">
 				More on Dribble <More />
 			</MoreButton>
 		</StyledLastProject>

@@ -72,7 +72,9 @@ const Bold = styled.span`
 	font-weight: 600;
 `;
 
-const MoreButton = styled.button`
+const MoreButton = styled.a`
+	width: fit-content;
+	text-decoration: none;
 	margin-top: 12px;
 	width: fit-content;
 	background-color: #fff;
@@ -126,7 +128,10 @@ const AboutMe = () => {
 					lasting impact.
 				</Paragraph>
 
-				<MoreButton>
+				<MoreButton
+					href="https://www.linkedin.com/in/zahrajafarin"
+					target="_blank"
+				>
 					More Details On LinkedIn <More width={50} height={35} />
 				</MoreButton>
 			</LeftSide>

@@ -86,7 +86,7 @@ const items = [
 	},
 	{
 		name: "Contact Me",
-		link: "profile_summary",
+		link: "contact_me",
 	},
 ];
 
@@ -116,6 +116,14 @@ const Glad = styled.span`
 `;
 
 export default function Header({ setShowScroll }) {
+	function downloadPDF(url, filename = "file.pdf") {
+		const link = document.createElement("a");
+		link.href = url;
+		link.download = filename;
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	}
 	return (
 		<StyledHeader>
 			<ImageSec>
@@ -142,7 +150,14 @@ export default function Header({ setShowScroll }) {
 					</StyledItem>
 				))}
 			</StyledNavbar>
-			<ResumeDownload>
+			<ResumeDownload
+				onClick={() =>
+					downloadPDF(
+						"./ZahraJafarinasab-Resume.pdf",
+						"ZahraJafarinasab-Resume"
+					)
+				}
+			>
 				Resume
 				<Download />
 			</ResumeDownload>

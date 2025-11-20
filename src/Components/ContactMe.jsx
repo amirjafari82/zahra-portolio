@@ -171,7 +171,7 @@ const Desc = styled.div`
 
 const ContactMe = () => {
 	return (
-		<StyledContactMe>
+		<StyledContactMe id="contact_me">
 			<StyledHeader>
 				<StyledHeaderBold>Contact Me</StyledHeaderBold>
 			</StyledHeader>
