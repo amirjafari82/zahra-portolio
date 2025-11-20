@@ -14,7 +14,7 @@ const StyledContactMe = styled.div`
 	border-radius: 56px;
 	padding: 80px;
 	border: 6px solid #e6e4ff;
-	flex-basis: 60%;
+	flex-basis: 48%;
 	@media (max-width: 1730px) {
 		padding: 40px;
 	}
@@ -41,9 +41,14 @@ const Logo = styled.div`
 `;
 
 const StyledSvg = styled.img`
-	width: 100%;
-	@media ${device.tablet} {
-		width: 250px;
+	width: 285px;
+
+	@media (max-width: 1660px) {
+		width: 220px;
+	}
+
+	@media (max-width: 1430px) {
+		width: 100%;
 	}
 
 	@media ${device.mobile} {
@@ -105,8 +110,8 @@ const StyledItem = styled.div`
 	@media ${device.tablet} {
 		padding: 12px;
 		> svg {
-			width: 20px;
-			height: 20px;
+			width: 30px;
+			height: 30px;
 		}
 	}
 
@@ -124,8 +129,9 @@ const StyledItem = styled.div`
 const Info = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 36px;
-	@media (max-width: 1730px) {
+	gap: 124px;
+	margin-top: 56px;
+	@media (max-width: 1430px) {
 		gap: 12px;
 	}
 `;
@@ -158,7 +164,7 @@ const Desc = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	@media (max-width: 1730px) {
+	@media (max-width: 1430px) {
 		flex-direction: column;
 	}
 `;

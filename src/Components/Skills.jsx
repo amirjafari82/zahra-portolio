@@ -9,7 +9,7 @@ const StyledSkills = styled.div`
 	padding: 0px;
 	border: 6px solid #e6e4ff;
 	/* flex-grow: 0.45; */
-	flex-basis: 40%;
+	flex-basis: 43%;
 `;
 
 const StyledHeader = styled.h4`

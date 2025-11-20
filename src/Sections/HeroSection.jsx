@@ -80,7 +80,7 @@ const StyledReadMore = styled.div`
 	margin-top: 16px;
 `;
 
-const StyledMore = styled.p`
+const StyledMore = styled.span`
 	display: flex;
 	align-items: center;
 	color: #003eba;
@@ -88,6 +88,21 @@ const StyledMore = styled.p`
 	justify-content: center;
 	gap: 8px;
 	cursor: pointer;
+	transition: transform 0.3s ease, font-weight 0.3s ease;	
+	svg path,
+	svg rect {
+		transition: stroke-width 0.3s ease-in;
+	}
+	&:hover {
+		transform: translateX(2px);
+		font-weight: 500;
+		svg path {
+			stroke-width: 1.8;
+		}
+		svg rect {
+			stroke-width: 1.8;
+		}
+	}
 `;
 
 const HeroSection = () => {
@@ -95,7 +110,7 @@ const HeroSection = () => {
 		<StyledHero>
 			<StyledIntro>
 				<p>
-					<span>Hi, This is</span>
+					<span>This is</span>
 					<StyledName>Zahra Jafarinasab</StyledName>
 				</p>
 			</StyledIntro>

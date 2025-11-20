@@ -28,7 +28,7 @@ const StyledNavbar = styled.div`
 	padding: 27px 40px;
 	border-radius: 100px;
 	box-shadow: 0px 4px 0px 0px #d9d9d9;
-	margin-left: 88px;
+	margin-right: 36px;
 	@media ${device.desktop} {
 		display: none;
 	}
@@ -90,10 +90,44 @@ const items = [
 	},
 ];
 
+const ImageSec = styled.div`
+	display: flex;
+	gap: 12px;
+	align-items: center;
+`;
+
+const ImageHi = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: start;
+	justify-content: center;
+`;
+
+const Hi = styled.span`
+	font-weight: 500;
+`;
+
+const Glad = styled.span`
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+`;
+
 export default function Header({ setShowScroll }) {
 	return (
 		<StyledHeader>
-			<StyledImage src={"./images/zahra-header.png"} id="img" />
+			<ImageSec>
+				<StyledImage src={"./images/zahra-header.png"} id="img" />
+				<ImageHi>
+					<Hi>Hi!</Hi>
+					<Glad>
+						<span>Glad to see you</span>
+						^_^
+					</Glad>
+				</ImageHi>
+			</ImageSec>
 			<StyledNavbar>
 				{items.map((i, index) => (
 					<StyledItem
