@@ -51,7 +51,7 @@ const Device = styled.p`
 `;
 
 const Role = styled.div`
-	border: 1px solid #c2c2c2;
+	border: 1px solid #e8ecf0;
 	border-radius: 56px;
 	width: fit-content;
 	padding: 8px;
@@ -82,7 +82,7 @@ const RoleSubject = styled.span`
 const Divider = styled.div`
 	width: 1px;
 	height: 48px;
-	background-color: #c4c1c1;
+	background-color: #e8ecf0;
 	margin: -8px 8px;
 	@media ${device.tablet} {
 		margin: -8px 2px;
@@ -106,7 +106,7 @@ const ToolsItems = styled.div`
 	gap: 12px;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid #d1cfcb;
+	border: 1px solid #e8ecf0;
 	border-radius: 56px;
 	width: fit-content;
 	padding: 4px 12px;

@@ -83,20 +83,20 @@ const Dot = styled.div`
 
 const Line2 = styled.div`
 	width: 2px;
-	height: 86%;
+	height: 87%;
 	background-color: #000;
 	position: absolute;
 	top: 16px;
 	left: 3px;
 	@media (max-width: 875px) {
-		height: 87%;
+		height: 89%;
 	}
 	@media (max-width: 821px) {
 		height: 86%;
 		top: 15px;
 	}
 	@media (max-width: 796px) {
-		height: 88%;
+		height: 89%;
 		top: 13px;
 	}
 	@media (max-width: 464px) {
@@ -229,13 +229,19 @@ const MyExperience = () => {
 						display: "flex",
 						gap: "8px",
 						alignItems: "center",
-						marginLeft: "30px",
+						margin: "8px 0px 8px 30px",
 					}}
 				>
 					<Logo>
 						<AminaLogo src="../images/aminagroup-logo-1 1.png" />
 					</Logo>
-					<StyledInfo>Amina Group</StyledInfo>
+					<StyledInfo
+						style={{
+							fontSize: "16px",
+						}}
+					>
+						Amina Group
+					</StyledInfo>
 				</div>
 				<StyledItems>
 					{items?.map((item) => (
