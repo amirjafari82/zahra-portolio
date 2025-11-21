@@ -6,8 +6,27 @@ const StyledH4 = styled.h4`
 	font-weight: 600;
 	font-size: 24px;
 	margin-bottom: 8px;
+	text-align: center;
 	@media ${device.tablet} {
 		font-size: 20px !important;
+	}
+`;
+
+const StyledCard = styled.div`
+	border: 1px solid #dadada;
+	border-radius: 56px;
+	padding: 44px;
+	margin-top: 16px;
+	@media ${device.mobile} {
+		padding: 16px;
+	}
+`;
+
+const StyledImage = styled.img`
+	border-radius: 16px;
+	width: 70%;
+	@media ${device.mobile} {
+		width: 100%;
 	}
 `;
 
@@ -22,14 +41,9 @@ const LowFidelityWireframes = () => {
 				few rounds of back-and-forth discussion, we finalized near-complete
 				versions for the UI, and I immediately jumped into the UI design.
 			</p>
-			<div
-				style={{
-					marginTop: "16px",
-					width: "100%",
-					height: "700px",
-					backgroundColor: "#E6E6E6",
-				}}
-			></div>
+			<StyledCard>
+				<StyledImage src="../../../images/pageImages/JavidaanWireframes.png" />
+			</StyledCard>
 		</div>
 	);
 };

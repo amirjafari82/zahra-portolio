@@ -108,8 +108,16 @@ const Line2 = styled.div`
 		height: 76%;
 		top: 64px;
 	}
+	@media (max-width: 436px) {
+		height: 77%;
+		top: 64px;
+	}
 	@media (max-width: 384px) {
-		height: 76%;
+		height: 77%;
+		top: 72px;
+	}
+	@media (max-width: 353px) {
+		height: 78%;
 		top: 72px;
 	}
 	/* @media (max-width: 1776px) {
@@ -240,7 +248,7 @@ const MyExperience = () => {
 						Fashion Designer
 					</StyledInfo>
 					<Dashed />
-					<StyledInfo>2022-2024</StyledInfo>
+					<StyledInfo>2021-2023</StyledInfo>
 				</Line>
 			</StyledDesc>
 		</StyledMyExperience>

@@ -13,8 +13,10 @@ const StyledContactMe = styled.div`
 	background-color: #fff;
 	border-radius: 56px;
 	padding: 80px;
+	padding-top: 30px;
 	border: 6px solid #e6e4ff;
 	flex-basis: 48%;
+	height: fit-content;
 	@media (max-width: 1730px) {
 		padding: 40px;
 	}
@@ -48,7 +50,7 @@ const StyledSvg = styled.img`
 	}
 
 	@media (max-width: 1430px) {
-		width: 100%;
+		width: 50%;
 	}
 
 	@media ${device.mobile} {
@@ -58,15 +60,15 @@ const StyledSvg = styled.img`
 
 const contactItems = [
 	{
-		link: "",
+		link: "https://www.linkedin.com/in/zahrajafarin",
 		icon: LinkedIn,
 	},
 	{
-		link: "",
+		link: "https://www.behance.net/zahrajafarin",
 		icon: Behance,
 	},
 	{
-		link: "",
+		link: "https://dribbble.com/zahrajafarin",
 		icon: Dribble,
 	},
 ];
@@ -88,7 +90,6 @@ const StyledItems = styled.div`
 `;
 
 const StyledItem = styled.div`
-	padding: 20px;
 	border-radius: 100%;
 	border: 1px solid #d1d1d1;
 	display: flex;
@@ -96,6 +97,12 @@ const StyledItem = styled.div`
 	justify-content: center;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	width: 72px;
+	height: 72px;
+	> svg {
+		width: 40px;
+		height: 40px;
+	}
 	&:hover {
 		border: 1px solid #1203df;
 		> svg {
@@ -108,7 +115,8 @@ const StyledItem = styled.div`
 		}
 	}
 	@media ${device.tablet} {
-		padding: 12px;
+		width: 56px;
+		height: 56px;
 		> svg {
 			width: 30px;
 			height: 30px;
@@ -116,12 +124,11 @@ const StyledItem = styled.div`
 	}
 
 	@media ${device.mobile} {
-		padding: 8px;
 		width: 50px;
 		height: 50px;
 		> svg {
-			width: 36px;
-			height: 36px;
+			width: 30px;
+			height: 30px;
 		}
 	}
 `;
@@ -129,10 +136,10 @@ const StyledItem = styled.div`
 const Info = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 124px;
-	margin-top: 56px;
+	gap: 36px;
 	@media (max-width: 1430px) {
 		gap: 12px;
+		width: 100%;
 	}
 `;
 
@@ -153,44 +160,76 @@ const Content = styled.div`
 			font-size: 16px;
 		}
 	}
+
+	@media ${device.mobileSm} {
+		> span {
+			font-size: 12px;
+		}
+	}
 `;
 
 const Links = styled.div`
 	display: flex;
 	flex-direction: column;
+	gap: 28px;
+	@media (max-width: 1430px) {
+		width: 100%;
+		gap: 8px;
+	}
 `;
 
 const Desc = styled.div`
 	display: flex;
-	align-items: center;
+	align-items: end;
 	justify-content: space-between;
 	@media (max-width: 1430px) {
 		flex-direction: column;
 	}
 `;
 
+const IconSec = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 72px;
+	height: 72px;
+	background-color: #f7f8f9;
+	@media ${device.mobileSm} {
+		width: 40px;
+		height: 40px;
+		> svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+`;
+
 const ContactMe = () => {
 	return (
 		<StyledContactMe id="contact_me">
-			<StyledHeader>
-				<StyledHeaderBold>Contact Me</StyledHeaderBold>
-			</StyledHeader>
 			<Desc>
 				<Info>
+					<StyledHeader>
+						<StyledHeaderBold>Contact Me</StyledHeaderBold>
+					</StyledHeader>
 					<Content>
-						<Email
-							style={{
-								flexShrink: 0,
-							}}
-						/>
+						<IconSec>
+							<Email
+								style={{
+									flexShrink: 0,
+								}}
+							/>
+						</IconSec>
 						<span>zahrajfnsb@gmail.com</span>
 					</Content>
 					<Content>
-						<Phone
-							style={{
-								flexShrink: 0,
-							}}
-						/>
+						<IconSec>
+							<Phone
+								style={{
+									flexShrink: 0,
+								}}
+							/>
+						</IconSec>
 						<span>+98-919735-0238</span>
 					</Content>
 				</Info>

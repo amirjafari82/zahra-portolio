@@ -25,10 +25,43 @@ const StyledHeader = styled.h4`
 `;
 
 const StyledDesc = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: end;
 	width: 100%;
+	position: relative;
+	height: fit-content;
+	height: 296px;
+	@media (max-width: 1660px) {
+		height: 258px;
+	}
+	@media (max-width: 1430px) {
+		margin-top: 47%;
+	}
+
+	@media (max-width: 1024px) {
+		height: 366px;
+		margin-top: 0;
+	}
+
+	@media (max-width: 768px) {
+		height: 300px;
+		margin-top: 0;
+	}
+
+	@media (max-width: 600px) {
+		height: 200px;
+		margin-top: 0;
+	}
+	@media (max-width: 425px) {
+		height: 145px;
+		margin-top: 0;
+	}
+`;
+
+const Image = styled.img`
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
 `;
 
 const Skills = () => {
@@ -37,13 +70,12 @@ const Skills = () => {
 			<StyledHeader>Skills</StyledHeader>
 			<StyledDesc
 				style={{
-					display: "block",
 					maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
 					WebkitMaskImage:
 						"linear-gradient(to bottom, black 70%, transparent 100%)",
 				}}
 			>
-				<SkillsSvg />
+				<Image src="../images/Skills.png" />
 			</StyledDesc>
 		</StyledSkills>
 	);
