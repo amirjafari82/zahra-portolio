@@ -6,7 +6,6 @@ const StyledH4 = styled.h4`
 	font-weight: 600;
 	font-size: 24px;
 	margin-bottom: 8px;
-	text-align: center;
 	@media ${device.tablet} {
 		font-size: 20px !important;
 	}
@@ -16,6 +15,7 @@ const StyledCard = styled.div`
 	border: 1px solid #dadada;
 	border-radius: 56px;
 	padding: 44px;
+	text-align: center;
 	margin-top: 16px;
 	@media ${device.mobile} {
 		padding: 16px;

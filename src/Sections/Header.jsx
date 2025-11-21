@@ -29,8 +29,44 @@ const StyledNavbar = styled.div`
 	border-radius: 100px;
 	box-shadow: 0px 4px 0px 0px #d9d9d9;
 	margin-right: 36px;
-	@media ${device.desktop} {
+	@media (max-width: 986px) {
 		display: none;
+	}
+`;
+
+const StyledNavbarMobile = styled.div`
+	display: none;
+	gap: 32px;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff;
+	padding: 27px 40px;
+	border-radius: 100px;
+	box-shadow: 0px 4px 0px 0px #d9d9d9;
+	margin-bottom: 36px !important;
+	width: fit-content;
+	margin: 0 auto;
+	@media (max-width: 986px) {
+		display: flex;
+	}
+
+	@media (max-width: 600px) {
+		width: calc(100% - 82px);
+	}
+
+	@media (max-width: 520px) {
+		gap: 16px;
+		> a {
+			font-size: 12px !important;
+		}
+	}
+
+	@media (max-width: 420px) {
+		width: calc(100% - 24px);
+		padding: 16px 12px;
+		> a {
+			font-size: 10px !important;
+		}
 	}
 `;
 
@@ -39,6 +75,7 @@ const StyledItem = styled.a`
 	font-weight: 400;
 	font-size: 16px;
 	color: #767676;
+	flex-shrink: 0;
 	transition: 0.3s all ease-in-out;
 	&:hover {
 		color: #000;
@@ -102,6 +139,13 @@ const ImageHi = styled.div`
 	gap: 4px;
 	align-items: start;
 	justify-content: center;
+	@media (max-width: 1024px) {
+		font-size: 12px;
+	}
+
+	@media (max-width: 378px) {
+		display: none;
+	}
 `;
 
 const Hi = styled.span`
@@ -125,18 +169,8 @@ export default function Header({ setShowScroll }) {
 		document.body.removeChild(link);
 	}
 	return (
-		<StyledHeader>
-			<ImageSec>
-				<StyledImage src={"./images/zahra-header.png"} id="img" />
-				<ImageHi>
-					<Hi>Hi!</Hi>
-					<Glad>
-						<span>Glad to see you</span>
-						^_^
-					</Glad>
-				</ImageHi>
-			</ImageSec>
-			<StyledNavbar>
+		<>
+			<StyledNavbarMobile>
 				{items.map((i, index) => (
 					<StyledItem
 						onClick={() => {
@@ -149,18 +183,44 @@ export default function Header({ setShowScroll }) {
 						{i.name}
 					</StyledItem>
 				))}
-			</StyledNavbar>
-			<ResumeDownload
-				onClick={() =>
-					downloadPDF(
-						"./ZahraJafarinasab-Resume.pdf",
-						"ZahraJafarinasab-Resume"
-					)
-				}
-			>
-				Resume
-				<Download />
-			</ResumeDownload>
-		</StyledHeader>
+			</StyledNavbarMobile>
+			<StyledHeader>
+				<ImageSec>
+					<StyledImage src={"./images/zahra-header.png"} id="img" />
+					<ImageHi>
+						<Hi>Hi!</Hi>
+						<Glad>
+							<span>Glad to see you</span>
+							^_^
+						</Glad>
+					</ImageHi>
+				</ImageSec>
+				<StyledNavbar>
+					{items.map((i, index) => (
+						<StyledItem
+							onClick={() => {
+								const element = document.getElementById(i.link);
+								element.scrollIntoView({ behavior: "smooth", block: "center" });
+								setShowScroll(true);
+							}}
+							key={index}
+						>
+							{i.name}
+						</StyledItem>
+					))}
+				</StyledNavbar>
+				<ResumeDownload
+					onClick={() =>
+						downloadPDF(
+							"./ZahraJafarinasab-Resume.pdf",
+							"ZahraJafarinasab-Resume"
+						)
+					}
+				>
+					Resume
+					<Download />
+				</ResumeDownload>
+			</StyledHeader>
+		</>
 	);
 }

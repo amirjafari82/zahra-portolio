@@ -193,6 +193,7 @@ const IconSec = styled.div`
 	justify-content: center;
 	width: 72px;
 	height: 72px;
+	border-radius: 100%;
 	background-color: #f7f8f9;
 	@media ${device.mobileSm} {
 		width: 40px;

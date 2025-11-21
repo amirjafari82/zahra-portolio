@@ -83,42 +83,36 @@ const Dot = styled.div`
 
 const Line2 = styled.div`
 	width: 2px;
-	height: 85%;
+	height: 86%;
 	background-color: #000;
 	position: absolute;
 	top: 16px;
 	left: 3px;
-	@media (max-width: 821px) {
-		height: 84%;
-		top: 24px;
+	@media (max-width: 875px) {
+		height: 87%;
 	}
-	@media (max-width: 620px) {
-		height: 76%;
-		top: 48px;
+	@media (max-width: 821px) {
+		height: 86%;
+		top: 15px;
+	}
+	@media (max-width: 796px) {
+		height: 88%;
+		top: 13px;
 	}
 	@media (max-width: 464px) {
-		height: 78%;
-		top: 48px;
+		height: 89%;
 	}
-	@media (max-width: 447px) {
-		height: 78%;
-		top: 52px;
+	@media (max-width: 440px) {
+		height: 88%;
+		top: 18px;
 	}
-	@media (max-width: 436px) {
-		height: 76%;
-		top: 64px;
+	@media (max-width: 414px) {
+		height: 89%;
+		top: 18px;
 	}
-	@media (max-width: 436px) {
-		height: 77%;
-		top: 64px;
-	}
-	@media (max-width: 384px) {
-		height: 77%;
-		top: 72px;
-	}
-	@media (max-width: 353px) {
-		height: 78%;
-		top: 72px;
+	@media (max-width: 352px) {
+		height: 89%;
+		top: 20px;
 	}
 	/* @media (max-width: 1776px) {
 		height: 82%;
@@ -197,8 +191,8 @@ const StyledItem = styled.div`
 
 const Logo = styled.div`
 	background-color: #001287;
-	width: 40px;
-	height: 40px;
+	width: 32px;
+	height: 32px;
 	border-radius: 100%;
 	display: flex;
 	align-items: center;
@@ -227,13 +221,22 @@ const MyExperience = () => {
 					</StyledInfo>
 					<Dashed />
 					<StyledInfoDiv>
-						<StyledInfo>2024-Present ,</StyledInfo>
-						<Logo>
-							<AminaLogo src="../images/aminagroup-logo-1 1.png" />
-						</Logo>
-						<StyledInfo>Amina Group</StyledInfo>
+						<StyledInfo>2024-Present</StyledInfo>
 					</StyledInfoDiv>
 				</Line>
+				<div
+					style={{
+						display: "flex",
+						gap: "8px",
+						alignItems: "center",
+						marginLeft: "30px",
+					}}
+				>
+					<Logo>
+						<AminaLogo src="../images/aminagroup-logo-1 1.png" />
+					</Logo>
+					<StyledInfo>Amina Group</StyledInfo>
+				</div>
 				<StyledItems>
 					{items?.map((item) => (
 						<StyledItem>
