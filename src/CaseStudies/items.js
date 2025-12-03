@@ -18,7 +18,7 @@ import PhotoShop from "./tools/PhotoShop";
 export const caseItems = {
 	Javidaan: {
 		header: {
-			title: "Designing an <strong>SEO Analyzer Dashboard</strong>",
+			title: "Designing a <strong>SEO Analyzer Dashboard</strong>",
 			date: "2025",
 			device: "Web",
 			textColor: "#000",
@@ -46,7 +46,7 @@ export const caseItems = {
 	},
 	App100: {
 		header: {
-			title: "Designing an <strong>User-friendly Finance App</strong>",
+			title: "Designing a <strong>User-friendly Finance App</strong>",
 			date: "2024",
 			device: "Web",
 			role: "Product Designer",
@@ -117,12 +117,12 @@ export const caseItems = {
   		the Achare website. Through the design process, we discovered that streamlining and speeding up the
   		service request flow could significantly improve the overall user experience — which became the main focus
   		of the redesign.`,
-		problem: `The stakeholders recognized a clear need at the outset of this project: 
-		scheduling a doctor's appointment was frequently difficult, 
-		time-consuming, and frustrating, particularly for senior citizens. 
-		The idea was to create an app that makes everything easier, 
-		from scheduling an appointment to locating the best doctor, 
-		by providing a simple, easy-to-use interface that saves time and lowers stress.`,
+		// problem: `The stakeholders recognized a clear need at the outset of this project: 
+		// scheduling a doctor's appointment was frequently difficult, 
+		// time-consuming, and frustrating, particularly for senior citizens. 
+		// The idea was to create an app that makes everything easier, 
+		// from scheduling an appointment to locating the best doctor, 
+		// by providing a simple, easy-to-use interface that saves time and lowers stress.`,
 		research: AchareResearch,
 		design: AchareDesign,
 	},

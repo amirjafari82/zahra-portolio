@@ -3,8 +3,6 @@ import styled from "styled-components";
 import Ellipse from "../../../assets/icons/Ellipse";
 import { device } from "../../../styles/breakpoints";
 
-const items = ["Must Have", "Could Have", "Should Have", "Won’t Have"];
-
 const cardItems = [
 	{
 		title: "Basic Features",
@@ -123,19 +121,6 @@ const JavidaanFeatures = () => {
 		>
 			<div>
 				<StyledH4>Features</StyledH4>
-				<StyledItems>
-					{items?.map((d) => (
-						<span
-							style={{
-								color: "#9C9C9C",
-								fontSize: "20px",
-								fontWeight: 500,
-							}}
-						>
-							{d}
-						</span>
-					))}
-				</StyledItems>
 			</div>
 			<StyledP1
 				style={{
