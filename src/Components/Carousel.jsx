@@ -20,6 +20,7 @@ const StyledCarousel = styled.div`
 	overflow: hidden;
 	align-items: center;
 	position: relative;
+	touch-action: pan-y;
 	&::before,
 	&::after {
 		content: "";
@@ -69,7 +70,15 @@ const Badge = styled.span`
 const Carousel = () => {
 	const [image, setImage] = useState(1);
 	const carouselRef = useRef(null);
-	const drag = useRef({ isDragging: false, startX: 0, scrollLeft: 0 });
+	const drag = useRef({
+		isDragging: false,
+		startX: 0,
+		startY: 0,
+		scrollLeft: 0,
+		pointerId: null,
+		isHorizontal: false,
+		cancelSnap: false,
+	});
 
 	const scrollToImage = (index) => {
 		const carousel = carouselRef.current;
@@ -121,24 +130,20 @@ const Carousel = () => {
 		const carousel = carouselRef.current;
 		if (!carousel) return;
 
-		const startDrag = (e) => {
-			drag.current.isDragging = true;
-			drag.current.startX = e.pageX ?? e.touches[0].pageX;
-			drag.current.scrollLeft = carousel.scrollLeft;
+		const resetDragState = (overrides = {}) => {
+			drag.current = {
+				isDragging: false,
+				startX: 0,
+				startY: 0,
+				scrollLeft: 0,
+				pointerId: null,
+				isHorizontal: false,
+				cancelSnap: false,
+				...overrides,
+			};
 		};
 
-		const onDrag = (e) => {
-			if (!drag.current.isDragging) return;
-			e.preventDefault();
-			const x = e.pageX ?? e.touches[0].pageX;
-			const walk = drag.current.startX - x;
-			carousel.scrollLeft = drag.current.scrollLeft + walk;
-		};
-
-		const stopDrag = () => {
-			if (!drag.current.isDragging) return;
-			drag.current.isDragging = false;
-
+		const snapToClosestImage = () => {
 			const wrappers = Array.from(carousel.children);
 			const children = wrappers.map((w) => w.querySelector("img"));
 
@@ -160,24 +165,94 @@ const Carousel = () => {
 			scrollToImage(closestIndex);
 		};
 
-		carousel.addEventListener("mousedown", startDrag);
-		carousel.addEventListener("mousemove", onDrag);
-		window.addEventListener("mouseup", stopDrag);
-		carousel.addEventListener("mouseleave", stopDrag);
+		const releasePointer = () => {
+			if (
+				carousel.releasePointerCapture &&
+				drag.current.pointerId !== null &&
+				carousel.hasPointerCapture?.(drag.current.pointerId)
+			) {
+				carousel.releasePointerCapture(drag.current.pointerId);
+			}
+			drag.current.pointerId = null;
+		};
 
-		carousel.addEventListener("touchstart", startDrag, { passive: true });
-		carousel.addEventListener("touchmove", onDrag, { passive: false });
-		window.addEventListener("touchend", stopDrag);
+		const startDrag = (e) => {
+			if (e.button !== undefined && e.button !== 0) return;
+
+			resetDragState({
+				isDragging: true,
+				startX: e.clientX,
+				startY: e.clientY,
+				scrollLeft: carousel.scrollLeft,
+				pointerId: e.pointerId ?? null,
+			});
+
+			if (carousel.setPointerCapture && e.pointerId !== undefined) {
+				carousel.setPointerCapture(e.pointerId);
+			}
+		};
+
+		const onDrag = (e) => {
+			if (!drag.current.isDragging) return;
+			if (
+				drag.current.pointerId !== null &&
+				e.pointerId !== undefined &&
+				e.pointerId !== drag.current.pointerId
+			)
+				return;
+
+			const currentX = e.clientX;
+			const currentY = e.clientY;
+			const deltaX = drag.current.startX - currentX;
+			const deltaY = Math.abs(drag.current.startY - currentY);
+
+			if (!drag.current.isHorizontal) {
+				if (deltaY > 10 && deltaY > Math.abs(deltaX)) {
+					const pointerId = drag.current.pointerId;
+					resetDragState({ cancelSnap: true, pointerId });
+					releasePointer();
+					return;
+				}
+
+				if (Math.abs(deltaX) < 6) return;
+				drag.current.isHorizontal = true;
+			}
+
+			e.preventDefault();
+			carousel.scrollLeft = drag.current.scrollLeft + deltaX;
+		};
+
+		const stopDrag = () => {
+			if (!drag.current.isDragging) return;
+
+			releasePointer();
+
+			const shouldSnap = !drag.current.cancelSnap;
+			resetDragState();
+
+			if (shouldSnap) {
+				snapToClosestImage();
+			}
+		};
+
+		const cancelDrag = () => {
+			if (!drag.current.isDragging) return;
+			releasePointer();
+			resetDragState({ cancelSnap: true });
+		};
+
+		carousel.addEventListener("pointerdown", startDrag);
+		carousel.addEventListener("pointermove", onDrag);
+		carousel.addEventListener("pointerup", stopDrag);
+		carousel.addEventListener("pointercancel", cancelDrag);
+		carousel.addEventListener("pointerleave", cancelDrag);
 
 		return () => {
-			carousel.removeEventListener("mousedown", startDrag);
-			carousel.removeEventListener("mousemove", onDrag);
-			window.removeEventListener("mouseup", stopDrag);
-			carousel.removeEventListener("mouseleave", stopDrag);
-
-			carousel.removeEventListener("touchstart", startDrag);
-			carousel.removeEventListener("touchmove", onDrag);
-			window.removeEventListener("touchend", stopDrag);
+			carousel.removeEventListener("pointerdown", startDrag);
+			carousel.removeEventListener("pointermove", onDrag);
+			carousel.removeEventListener("pointerup", stopDrag);
+			carousel.removeEventListener("pointercancel", cancelDrag);
+			carousel.removeEventListener("pointerleave", cancelDrag);
 		};
 	}, []);
 

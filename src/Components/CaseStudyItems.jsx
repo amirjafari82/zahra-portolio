@@ -26,7 +26,13 @@ const items = [
 		image: "./images/Redesign.png",
 		title: "Redesigning a service app",
 		desc: "A handy app that helps you book doctor appointments, manage your records, and easily stay in touch with your doctor.",
-		link: "Achare", 
+		link: "Achare",
+	},
+	{
+		image: "./images/Skills.png",
+		title: "Enhancing User Trust and Experience",
+		desc: "A trust-first medical experience that uses transparent status updates and credential-rich onboarding to reduce anxiety.",
+		link: "TrustApp",
 	},
 ];
 

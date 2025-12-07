@@ -14,6 +14,10 @@ import Figma from "./tools/Figma";
 import Maze from "./tools/Maze";
 import Meet from "./tools/Meet";
 import PhotoShop from "./tools/PhotoShop";
+import TrustAppOverview from "./TrustApp/TrustAppOverview";
+import TrustAppResearch from "./TrustApp/Research/TrustAppResearch";
+import TrustAppDesign from "./TrustApp/Design/TrustAppDesign";
+import TrustAppOutcome from "./TrustApp/Outcome/TrustAppOutcome";
 
 export const caseItems = {
 	Javidaan: {
@@ -125,5 +129,26 @@ export const caseItems = {
 		by providing a simple, easy-to-use interface that saves time and lowers stress.`,
 		research: AchareResearch,
 		design: AchareDesign,
+	},
+	TrustApp: {
+		header: {
+			title: "Enhancing <strong>User Trust and Experience</strong>",
+			date: "2023",
+			device: "Web",
+			role: "Product Designer",
+			textColor: "#fff",
+			bgStyle: {
+				background: "linear-gradient(90deg, #0D6A1C 0%, #0C9443 100%)",
+			},
+			tools: [Figma, Maze, PhotoShop, Meet],
+			image: "../images/pageImages/TrustApp.png",
+			imgHeight: "420px",
+		},
+		projectOverViewComp: TrustAppOverview,
+		problem: `Users struggled to verify the credibility of their assigned specialists and felt uneasy
+		about uploading sensitive medical records. As a result, many abandoned the flow or reverted to support channels.`,
+		research: TrustAppResearch,
+		design: TrustAppDesign,
+		usabilityTesting: TrustAppOutcome,
 	},
 };
