@@ -6,13 +6,13 @@ import { device } from "../styles/breakpoints";
 const items = [
 	{
 		image: "./images/SEO_Analyzer.png",
-		title: "Designing an SEO Analyzer Dashboard",
+		title: "Designing a SEO Analyzer Dashboard",
 		desc: "An intuitive SEO dashboard that turns complex data into clear insights, helping specialists track performance and make smarter, faster decisions.",
 		link: "Javidaan",
 	},
 	{
 		image: "./images/Finance.png",
-		title: "Designing an User-friendly Finance App",
+		title: "Designing a User-friendly Finance App",
 		desc: "A smart banking app that helps you manage your money effortlessly — secure, simple, and always within reach.",
 		link: "App100",
 	},
@@ -27,12 +27,6 @@ const items = [
 		title: "Redesigning a service app",
 		desc: "A handy app that helps you book doctor appointments, manage your records, and easily stay in touch with your doctor.",
 		link: "Achare",
-	},
-	{
-		image: "./images/Skills.png",
-		title: "Enhancing User Trust and Experience",
-		desc: "A trust-first medical experience that uses transparent status updates and credential-rich onboarding to reduce anxiety.",
-		link: "TrustApp",
 	},
 ];
 

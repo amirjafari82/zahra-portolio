@@ -22,7 +22,7 @@ import TrustAppOutcome from "./TrustApp/Outcome/TrustAppOutcome";
 export const caseItems = {
 	Javidaan: {
 		header: {
-			title: "Designing an <strong>SEO Analyzer Dashboard</strong>",
+			title: "Designing a <strong>SEO Analyzer Dashboard</strong>",
 			date: "2025",
 			device: "Web",
 			textColor: "#000",
@@ -50,7 +50,7 @@ export const caseItems = {
 	},
 	App100: {
 		header: {
-			title: "Designing an <strong>User-friendly Finance App</strong>",
+			title: "Designing a <strong>User-friendly Finance App</strong>",
 			date: "2024",
 			device: "Web",
 			role: "Product Designer",
@@ -121,34 +121,13 @@ export const caseItems = {
   		the Achare website. Through the design process, we discovered that streamlining and speeding up the
   		service request flow could significantly improve the overall user experience — which became the main focus
   		of the redesign.`,
-		problem: `The stakeholders recognized a clear need at the outset of this project: 
-		scheduling a doctor's appointment was frequently difficult, 
-		time-consuming, and frustrating, particularly for senior citizens. 
-		The idea was to create an app that makes everything easier, 
-		from scheduling an appointment to locating the best doctor, 
-		by providing a simple, easy-to-use interface that saves time and lowers stress.`,
+		// problem: `The stakeholders recognized a clear need at the outset of this project: 
+		// scheduling a doctor's appointment was frequently difficult, 
+		// time-consuming, and frustrating, particularly for senior citizens. 
+		// The idea was to create an app that makes everything easier, 
+		// from scheduling an appointment to locating the best doctor, 
+		// by providing a simple, easy-to-use interface that saves time and lowers stress.`,
 		research: AchareResearch,
 		design: AchareDesign,
-	},
-	TrustApp: {
-		header: {
-			title: "Enhancing <strong>User Trust and Experience</strong>",
-			date: "2023",
-			device: "Web",
-			role: "Product Designer",
-			textColor: "#fff",
-			bgStyle: {
-				background: "linear-gradient(90deg, #0D6A1C 0%, #0C9443 100%)",
-			},
-			tools: [Figma, Maze, PhotoShop, Meet],
-			image: "../images/pageImages/TrustApp.png",
-			imgHeight: "420px",
-		},
-		projectOverViewComp: TrustAppOverview,
-		problem: `Users struggled to verify the credibility of their assigned specialists and felt uneasy
-		about uploading sensitive medical records. As a result, many abandoned the flow or reverted to support channels.`,
-		research: TrustAppResearch,
-		design: TrustAppDesign,
-		usabilityTesting: TrustAppOutcome,
-	},
+	}
 };
