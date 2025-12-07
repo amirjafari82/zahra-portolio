@@ -53,7 +53,7 @@ export const caseItems = {
 			title: "Designing a <strong>User-friendly Finance App</strong>",
 			date: "2024",
 			device: "Web",
-			role: "Product Designer",
+			role: "UI/UX Designer",
 			textColor: "#fff",
 			bgStyle: {
 				background: "linear-gradient(269.83deg, #101CCF 0.14%, #0C1488 99.86%)",
@@ -81,7 +81,7 @@ export const caseItems = {
 			bgStyle: {
 				background: "linear-gradient(269.86deg, #4159F1 0.12%, #3041AC 99.88%)",
 			},
-			tools: [Figma, Maze, Clarity, PhotoShop, Meet],
+			tools: [Figma, Maze, PhotoShop, Meet],
 			image: "../images/pageImages/Nabz.png",
 			imgHeight: "447px",
 			imgTabletRespWidth: "60%",

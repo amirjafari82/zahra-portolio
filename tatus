@@ -1,0 +1,37 @@
+[1mdiff --git a/src/CaseStudies/items.js b/src/CaseStudies/items.js[m
+[1mindex 06a1d5d..250d3cd 100644[m
+[1m--- a/src/CaseStudies/items.js[m
+[1m+++ b/src/CaseStudies/items.js[m
+[36m@@ -53,7 +53,7 @@[m [mexport const caseItems = {[m
+ 			title: "Designing a <strong>User-friendly Finance App</strong>",[m
+ 			date: "2024",[m
+ 			device: "Web",[m
+[31m-			role: "Product Designer",[m
+[32m+[m			[32mrole: "UI/UX Designer",[m
+ 			textColor: "#fff",[m
+ 			bgStyle: {[m
+ 				background: "linear-gradient(269.83deg, #101CCF 0.14%, #0C1488 99.86%)",[m
+[36m@@ -81,7 +81,7 @@[m [mexport const caseItems = {[m
+ 			bgStyle: {[m
+ 				background: "linear-gradient(269.86deg, #4159F1 0.12%, #3041AC 99.88%)",[m
+ 			},[m
+[31m-			tools: [Figma, Maze, Clarity, PhotoShop, Meet],[m
+[32m+[m			[32mtools: [Figma, Maze, PhotoShop, Meet],[m
+ 			image: "../images/pageImages/Nabz.png",[m
+ 			imgHeight: "447px",[m
+ 			imgTabletRespWidth: "60%",[m
+[1mdiff --git a/src/Components/CaseStudyItems.jsx b/src/Components/CaseStudyItems.jsx[m
+[1mindex 47fef98..9071ec1 100644[m
+[1m--- a/src/Components/CaseStudyItems.jsx[m
+[1m+++ b/src/Components/CaseStudyItems.jsx[m
+[36m@@ -24,8 +24,8 @@[m [mconst items = [[m
+ 	},[m
+ 	{[m
+ 		image: "./images/Redesign.png",[m
+[31m-		title: "Redesigning a service app",[m
+[31m-		desc: "A handy app that helps you book doctor appointments, manage your records, and easily stay in touch with your doctor.",[m
+[32m+[m		[32mtitle: "Improving the service request process",[m
+[32m+[m		[32mdesc: "Redesigned Achare’s service flow to make booking faster and simpler, aiming to boost user engagement and create a smoother, more efficient experience.",[m
+ 		link: "Achare",[m
+ 	},[m
+ ];[m

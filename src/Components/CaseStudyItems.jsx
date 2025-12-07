@@ -24,8 +24,8 @@ const items = [
 	},
 	{
 		image: "./images/Redesign.png",
-		title: "Redesigning a service app",
-		desc: "A handy app that helps you book doctor appointments, manage your records, and easily stay in touch with your doctor.",
+		title: "Improving the service request process",
+		desc: "Redesigned Achare’s service flow to make booking faster and simpler, aiming to boost user engagement and create a smoother, more efficient experience.",
 		link: "Achare",
 	},
 ];
