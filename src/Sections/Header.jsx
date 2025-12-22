@@ -212,8 +212,8 @@ export default function Header({ setShowScroll }) {
 				<ResumeDownload
 					onClick={() =>
 						downloadPDF(
-							"./ZahraJafarinasab-Resume.pdf",
-							"ZahraJafarinasab-Resume"
+							"./ZahraJafarinasabResume.pdf",
+							"ZahraJafarinasabResume.pdf"
 						)
 					}
 				>

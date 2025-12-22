@@ -121,11 +121,18 @@ const ToolsItems = styled.div`
 `;
 
 const HeaderImage = styled.img`
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	object-fit: contain;
+
 	@media ${device.desktopLgMid} {
 		width: ${(props) => props?.imgdesktopLgMidRespWidth || "40%"};
 		height: auto;
 		margin: 0 auto !important;
 	}
+
 	@media ${device.tablet} {
 		width: ${(props) => props?.imgtabletrespwidth || "100%"};
 		height: auto;
@@ -167,7 +174,6 @@ const Header = ({ curruntPage }) => {
 			<HeaderImage
 				src={curruntPage.header.image}
 				width={curruntPage.header.imgWidth}
-				height={curruntPage.header.imgHeight}
 				imgtabletrespwidth={curruntPage.header.imgTabletRespWidth}
 				imgdesktopLgMidRespWidth={curruntPage.header.imgdesktopLgMidRespWidth}
 				style={{
