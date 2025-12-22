@@ -121,9 +121,8 @@ const ToolsItems = styled.div`
 `;
 
 const HeaderImage = styled.img`
-	width: 100%;
 	max-width: 100%;
-	height: auto;
+	height: ${(props) => props.imgHeight || "auto"};
 	display: block;
 	object-fit: contain;
 
@@ -173,7 +172,7 @@ const Header = ({ curruntPage }) => {
 			</HeaderInfo>
 			<HeaderImage
 				src={curruntPage.header.image}
-				width={curruntPage.header.imgWidth}
+				imgHeight={curruntPage.header.imgHeight}
 				imgtabletrespwidth={curruntPage.header.imgTabletRespWidth}
 				imgdesktopLgMidRespWidth={curruntPage.header.imgdesktopLgMidRespWidth}
 				style={{
