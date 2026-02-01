@@ -89,7 +89,7 @@ const StyledItems = styled.div`
 	}
 `;
 
-const StyledItem = styled.div`
+const StyledItem = styled.a`
 	border-radius: 100%;
 	border: 1px solid #d1d1d1;
 	display: flex;
@@ -242,7 +242,7 @@ const ContactMe = () => {
 						{contactItems.map((item) => {
 							const Icon = item.icon;
 							return (
-								<StyledItem fill={item?.fill}>
+								<StyledItem fill={item?.fill} href={item?.link} target="_blank">
 									<Icon />
 								</StyledItem>
 							);
